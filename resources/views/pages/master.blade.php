@@ -10,6 +10,8 @@
     <script type="text/javascript" src="assets/js/jquery.min.js"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel='stylesheet prefetch' href='https://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css'>
+
 </head>
 
 <body>
