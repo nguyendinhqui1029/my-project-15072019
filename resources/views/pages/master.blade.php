@@ -117,9 +117,11 @@
                 <!-- Tinh thanh pho lien quan -->
                 <div class="row">
                     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="test">
-                            tinh thanh pho
-                        </div>
+                        {{-- Nhà đất theo tỉnh thành phố --}}
+                       @section('nha-dat-theo-tinh-thanh-pho')
+                            
+                       @show
+                        {{-- Nhà đất theo tỉnh thành phố--}}
                     </div>
                 </div>
                 <!--Tinh thanh pho lien quan -->

@@ -255,7 +255,6 @@ body {
   box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
   border-radius: 5px;
   padding: 10px;
-  margin-left: 5px;
   background-color: #fff;
   font-size: 12px;
   font-family: Arial,Verdana,sans-serif;
@@ -407,4 +406,20 @@ input[type=text], textarea, input[type=password] {
   label.star:before {
     content: '\f006';
     font-family: FontAwesome;
+  }
+
+  /* Nhà đất khu vực */
+  .border-area{
+    border-bottom: 1px dashed rgb(49, 46, 46);
+  }
+  .title-area{
+    background-color: #0fbaf5;
+    border-bottom: 2px dotted #d13d3d;
+    padding-left: 5px;
+    padding-top: 5px;
+  }
+
+  .title-area h5{
+    color: white;
+    line-height: 17px;
   }

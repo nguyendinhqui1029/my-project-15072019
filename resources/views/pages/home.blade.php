@@ -51,6 +51,9 @@
   @include('modules.sub-modules.quang-cao-phai')
 @endsection
 
+@section('nha-dat-theo-tinh-thanh-pho')
+@include('modules.sub-modules.nha-dat-khu-vuc')   
+@endsection
 @section('content')
   @include('modules.sub-modules.content')   
 @endsection
