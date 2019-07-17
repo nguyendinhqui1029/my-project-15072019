@@ -18,11 +18,11 @@
     <!-- Header -->
 
 <div class="row">
-    <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block col-md-1 col-lg-1 col-xl-1">
+    <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block col-lg-1 col-xl-1">
         @section('quang-cao-trai')
         @show
     </div>
-    <div class="col-12 col-sm-12 col-md-10 col-lg-10 col-xl-10">
+    <div class="col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10">
             <header>
                 <!-- header top -->
                 {{-- thông tin liên hệ trên đầu --}}
@@ -132,7 +132,7 @@
             </footer>
             <!-- End Footer -->
     </div>
-    <div class="d-none d-sm-none d-md-block d-lg-block d-xl-block col-md-1 col-lg-1 col-xl-1">
+    <div class="d-none d-sm-none d-md-none d-lg-block d-xl-block col-lg-1 col-xl-1">
             @section('quang-cao-phai')
             @show
     </div>
