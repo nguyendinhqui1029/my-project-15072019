@@ -374,7 +374,7 @@ input[type=text], textarea, input[type=password] {
 
   /* Tạo đánh giá sao */
   div.stars {
-    width: 100%;
+    /* width: 100%; */
     display: inline-block;
   }
    
