@@ -3,7 +3,7 @@
         <div class="bat-dong-san-noi-bat-box">
                 <div class="row justify-content-start">
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                <div class="row box-du-an mr-1">
+                                <div class="row box-du-an ">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                 <div class="row align-items-start">
                                                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
@@ -68,7 +68,7 @@
                                 </div>
                         </div>
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                <div class="row box-du-an ml-1">
+                                <div class="row box-du-an ">
                                         <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                 <div class="row align-items-start">
                                                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
@@ -135,7 +135,7 @@
                 </div>
                 <div class="row justify-content-start">
                                 <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                        <div class="row box-du-an mr-1">
+                                        <div class="row box-du-an ">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                         <div class="row align-items-start">
                                                                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
@@ -200,7 +200,7 @@
                                         </div>
                                 </div>
                                 <div class="col-12 col-sm-6 col-md-12 col-lg-6">
-                                        <div class="row box-du-an ml-1">
+                                        <div class="row box-du-an ">
                                                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
                                                         <div class="row align-items-start">
                                                                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">

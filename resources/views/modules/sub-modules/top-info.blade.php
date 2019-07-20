@@ -1,7 +1,6 @@
 
 <div class="row  fixed-top justify-content-md-center">
-        <div class="col-12 col-sm-12 col-md-10 col-lg-10">
-            
+        <div class="col-12 col-sm-12 col-md-12 col-xl-10 col-lg-10">
             <div class="top-info">
                 <ul>
                     <img src="assets/images/new.gif" class="img-info-top"> Hỗ trợ đăng tin:
