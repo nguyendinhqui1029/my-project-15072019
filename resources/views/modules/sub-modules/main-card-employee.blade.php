@@ -1,0 +1,10 @@
+@extends('modules.sub-modules.card-employee.component-card')
+@section('image')
+    @include('modules.sub-modules.card-employee.image-card-employee')
+@endsection
+@section('content')
+    @include('modules.sub-modules.card-employee.content-card-employee')
+@endsection
+@section('evaluate')
+    @include('modules.sub-modules.card-employee.evaluate-card-employee')
+@endsection
