@@ -52,10 +52,8 @@
                 </div>
                 <!-- end logo and video introduce -->
                 <!-- tien ich dang nhap dang ki -->
-                <div class="row justify-content-end">
                         @section('menu-top')   
                         @show
-                </div>
                 <!-- tien ich dang nhap dang ki -->
                 <!-- menu -->
                 <div class="row">
