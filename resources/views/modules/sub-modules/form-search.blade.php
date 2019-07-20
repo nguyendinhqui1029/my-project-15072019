@@ -2,7 +2,7 @@
         <!-- dia diem -->
         <div class="row justify-content-start">
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
-                <label class="label-form-search">Địa điểm</label>
+            <label class="label-form-search">{{__('label-dia-diem')}}</label>
             </div>
             <div class="col-10 col-sm-10 col-md-9 col-lg-10">
                 <input type="text" class="place" placeholder="Nhập địa điểm cần tìm"
@@ -100,8 +100,7 @@
         <!-- dòng 5 -->
 
         <!--dòng 6-->
-        <div class="row">
-
+        <div class="row justify-content-centre">
             <div class="col align-self-center offset-4">
                 <input name="" id="" class="btn btn-primary" type="button" value="Tìm Kiếm">
             </div>
