@@ -52,7 +52,8 @@
 @endsection
 
 @section('nha-dat-theo-tinh-thanh-pho')
-@include('modules.sub-modules.nha-dat-khu-vuc')   
+{{-- @include('modules.sub-modules.main-card-employee') --}}
+@include('modules.sub-modules.nha-dat-khu-vuc')  
 @endsection
 @section('content')
   @include('modules.sub-modules.content')   
