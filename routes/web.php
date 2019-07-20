@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('pages.home');
 });
+// trang nhà mua giới
+Route::get('/nha-moi-gioi', function () {
+    return view('pages.nhamoigioi');
+});
