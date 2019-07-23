@@ -249,18 +249,25 @@ body {
   text-decoration: underline !important;
 }
 /*css form tìm kiếm*/
-.form-search
-{
-  border:dashed 1px #e0e0e0;
+.form-search-right{
+  height:200px;
+  background-image: url('../images/search-bg.png');
+  border:solid 1px #bbb9b9;
+}
+.form-search-centre{
+  height: 100%;
   box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
   border-radius: 5px;
+  border:dashed 1px #e0e0e0;
+}
+.form-search
+{
   padding: 10px;
   background-color: #fff;
   font-size: 12px;
   font-family: Arial,Verdana,sans-serif;
-  height: 100%;
 }
-.form-search:hover{
+.form-search-centre:hover{
   box-shadow:none;
 }
 .form-search .label-form-search{

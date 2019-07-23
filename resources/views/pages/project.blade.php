@@ -23,7 +23,7 @@
 @endsection
 
 @section('form-search')
-  @include('modules.sub-modules.form-search-center')   
+  @include('modules.sub-modules.form-search')   
 @endsection
 
 @section('kinh-nghiem')
@@ -37,7 +37,6 @@
 
 @section('news-right')
   @include('modules.sub-modules.news-right')   
-  {{-- @include('modules.sub-modules.form-search-right')   --}}
 @endsection
 
 @section('quick-link-right')
