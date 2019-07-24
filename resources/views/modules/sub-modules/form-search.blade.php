@@ -11,7 +11,7 @@
         </div>
         <!-- dia diem -->
         <!-- loại tin , loại BDSS -->
-        <div class="row justify-content-start">
+        <div class="row justify-content-start"  >
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                 <label class="label-form-search"> Loại tin</label>
             </div>
@@ -74,7 +74,7 @@
         <!-- dòng 4 -->
 
         <!-- dòng 5 -->
-        <div class="row justify-content-start">
+        <div class="row justify-content-start" style="margin-bottom: 3%;">
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                     <label class="label-form-search">Diện tích</label>
             </div>
