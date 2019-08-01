@@ -23,28 +23,24 @@
 @endsection
 
 @section('form-search')
- {{-- @include('modules.sub-modules.form-search') --}}
+  @include('modules.sub-modules.form-search')   
 @endsection
 
 @section('kinh-nghiem')
-{{--@include('modules.sub-modules.kinh-nghiem')   --}}
+  @include('modules.sub-modules.kinh-nghiem')   
 @endsection
 
 
 @section('bat-dong-san-noi-bat')
-a
-{{-- @include('modules.sub-modules.card-employee.component-card') --}}
-{{-- @include('modules.sub-modules.nha-moi-gioi-danh-sach') --}}
+  @include('modules.sub-modules.bat-dong-san-noi-bat')   
 @endsection
 
 @section('news-right')
-
-{{-- @include('modules.sub-modules.news-right')    --}}
+  @include('modules.sub-modules.news-right')   
 @endsection
 
 @section('quick-link-right')
-@include('modules.sub-modules.form-search-right-moi-gioi')
-{{-- @include('modules.sub-modules.quick-link-right')    --}}
+  @include('modules.sub-modules.quick-link-right')   
 @endsection
 
 @section('quang-cao-trai')
@@ -55,10 +51,14 @@ a
   @include('modules.sub-modules.quang-cao-phai')
 @endsection
 
+@section('nha-dat-theo-tinh-thanh-pho')
+{{-- @include('modules.sub-modules.main-card-employee') --}}
+@include('modules.sub-modules.nha-dat-khu-vuc')  
+@endsection
 @section('content')
   @include('modules.sub-modules.content')   
 @endsection
 
 @section('footer')
-@include('modules.sub-modules.footer')
+  @include('modules.sub-modules.footer')
 @endsection
