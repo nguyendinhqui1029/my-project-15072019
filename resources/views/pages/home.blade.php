@@ -32,16 +32,12 @@
 
 
 @section('bat-dong-san-noi-bat')
+  @include('modules.sub-modules.box-du-an-noi-bat')
   @include('modules.sub-modules.bat-dong-san-noi-bat')   
 @endsection
 
 @section('news-right')
-  @include('modules.sub-modules.news-right')   
   @include('modules.sub-modules.form-search-right')  
-@endsection
-
-@section('quick-link-right')
-  @include('modules.sub-modules.quick-link-right')   
 @endsection
 
 @section('quang-cao-trai')
