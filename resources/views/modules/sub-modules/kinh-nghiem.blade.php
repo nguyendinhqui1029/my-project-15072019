@@ -1,5 +1,5 @@
 <div class="slides_container">
-        <div class="title"><a href="#">Kinh nghiệm</a></div>
+        <div class="title"><a href="#">{{__('title_kinh_nghiem')}}</a></div>
         <div class="row no-gutters">
                 <div class="col-md-4" style="height: 150x;">
                         <a href="#">

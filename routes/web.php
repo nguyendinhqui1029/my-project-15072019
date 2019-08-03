@@ -10,14 +10,14 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@home');
 
-Route::get('/du-an', function () {
-    return view('pages.project');
-});
+
+Route::get('/', "HomeController@home");
 
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
 });
-
+Route::get('/nha-dat-ban', function () {
+    return view('pages.nha-dat-ban');
+});

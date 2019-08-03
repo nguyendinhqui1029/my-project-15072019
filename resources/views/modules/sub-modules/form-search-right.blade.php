@@ -15,10 +15,10 @@
 @section('loai-tin-loai-bat-dong-san')
     <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         <select class="select">
-            <option value="can-ban">Cần bán</option>
-            <option value="cho-thue">Cho thuê</option>
-            <option value="can-mua">Cần mua</option>
-            <option value="can-thue">Cần thuê</option>
+            <option value="can-ban">{{__('label_can_ban')}}</option>
+            <option value="cho-thue">{{__('label_cho_thue')}}</option>
+            <option value="can-mua">{{__('label_can_mua')}}</option>
+            <option value="can-thue">{{__('label_can_thue')}}</option>
         </select>
     </div>
     <div class="col-6 col-sm-6 col-md-6 col-lg-6">
@@ -32,13 +32,13 @@
 @section('tinh-thanh-pho-quan-huyen')
     <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         <select class=" select">
-            <option value="can-ban">--Tỉnh Thành Phố--</option>
+            <option value="can-ban">--{{__('label_tinh_thanh')}}--</option>
         </select>
     </div>
 
     <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         <select class=" select">
-            <option value="can-ban">---Quận Huyện---</option>
+            <option value="can-ban">---{{__('label_quan_huyen')}}---</option>
         </select>
     </div>
 @endsection
@@ -55,7 +55,7 @@
 
     <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         <select class=" select">
-            <option value="can-ban">---Mức giá---</option>
+            <option value="can-ban">--- {{__('label_muc_gia')}} ---</option>
         </select>
     </div>
 @endsection
@@ -67,16 +67,16 @@
     @endsection
     <div class="col-6 col-sm-6 col-md-6 col-lg-6">
         <select class="select">
-            <option value="can-ban">---Huong---</option>
+            <option value="can-ban">---{{__('label_huong')}}---</option>
         </select>
     </div>
     <div class="col-6 col-sm-6 col-md-6 col-lg-6 d-flex justify-content-end">
-            <input style="width:115px; height: 25px;" class="dange" type="button" value="Tìm Kiếm">
+            <input style="width:115px; height: 25px;" class="dange" type="button" value="{{__('button_tim_kiem')}}">
     </div>
 @endsection
 {{-- button tìm kiếm và link tìm kiếm năng cao --}}
 @section('button-tim-kiem')
     <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-end">
-        <a rel="nofollow" style="font-size: 14px;">Tìm kiếm nâng cao</a>
+        <a rel="nofollow" style="font-size: 14px;">{{__('label_tim_kiem_nang_cao')}}</a>
     </div>
 @endsection

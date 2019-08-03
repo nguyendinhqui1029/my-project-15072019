@@ -1,5 +1,5 @@
 <div class="news-right">
-        <div class="title">Tin tức</div>
+        <div class="title">{{__('title_tin_tuc')}}</div>
         <div class="content-news">
             <ul>
                 <li><a

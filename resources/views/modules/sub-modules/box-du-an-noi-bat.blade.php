@@ -26,10 +26,10 @@
 {{-- Add data for box --}}
         {{-- data for Title and see more --}}
             @slot('contentTitle')
-               DỰ ÁN NỔI BẬT
+            {{__('title_bat_dong_san_noi_bat')}}
             @endslot
             @slot('contentSeeMore')
-               Xem thêm
+            {{__('title_xem_them')}}
             @endslot
             @slot('contentURLImage')
                anh-noi-bat.png
