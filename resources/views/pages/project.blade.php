@@ -1,6 +1,6 @@
 @extends('pages.master')
 
-@section('title',__('title_home'))
+@section('title',__('title-home'))
 
 @section('top-info')
   @include('modules.sub-modules.top-info')   
@@ -23,7 +23,7 @@
 @endsection
 
 @section('form-search')
-  @include('modules.sub-modules.form-search-center')   
+  @include('modules.sub-modules.form-search')   
 @endsection
 
 @section('kinh-nghiem')
@@ -32,19 +32,15 @@
 
 
 @section('bat-dong-san-noi-bat')
-  @include('modules.sub-modules.box-du-an-noi-bat')
   @include('modules.sub-modules.bat-dong-san-noi-bat')   
 @endsection
 
 @section('news-right')
-  @include('modules.sub-modules.news-right')
-  @include('modules.sub-modules.box-right-du-an')
-  @include('modules.sub-modules.box-right-du-an1')
+  @include('modules.sub-modules.news-right')   
 @endsection
 
 @section('quick-link-right')
   @include('modules.sub-modules.quick-link-right')   
- 
 @endsection
 
 @section('quang-cao-trai')
