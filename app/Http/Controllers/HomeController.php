@@ -7,6 +7,7 @@ use App\Classes\BoxRightMaster;
 use App\Classes\DataBoxRight;
 use App\Classes\BoxDuAnNoiBat;
 use App\Classes\DataCard;
+use App\Classes\FormSearch;
 class HomeController extends Controller
 {
     // function home(){
@@ -60,7 +61,8 @@ class HomeController extends Controller
     
         $var= \View::make('pages.home',["boxright" => new BoxRightMaster("bx",'1','2','3','4','5','6',$ds),
         "boxright1" => new BoxRightMaster("bx",'1','2','3','4','5','6',$ds2),
-        "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listData]);
+        "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listData,
+        "formSearchClass"=> new FormSearch()]);
         return $var;
     }
 }
