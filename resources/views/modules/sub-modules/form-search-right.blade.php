@@ -2,13 +2,13 @@
 
 {{-- css form search in center --}}
 @section('class-form-search')
-    form-search form-search-right
+form-search  form-search-right mt-2
 @endsection
 
 @section('dia-diem')
-    <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-        <input type="text" class="place" placeholder="Nhập địa điểm cần tìm" autocomplete="off">
-    </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12">
+            <input type="text" class="place" placeholder="Nhập địa điểm cần tìm" autocomplete="off">
+        </div>
 @endsection
 
 {{-- loại tin và loại bất động sản --}}

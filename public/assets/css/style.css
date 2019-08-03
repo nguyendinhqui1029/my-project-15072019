@@ -19,7 +19,8 @@ body {
 #menu ul {
   background: #0099CC;
   list-style-type: none;
-  text-align: center;
+  
+ 
 }
 #menu li {
   color: #f1f1f1;
@@ -28,41 +29,55 @@ body {
   height: 40px;
   line-height: 40px;
   margin-left: -5px;
+  border-left: 1px solid #45bbf7;
+  
 }
 #menu a {
   text-decoration: none;
   color: #fff;
   display: block;
+  text-align: center;
+  
 }
 #menu a:hover {
   background: #F1F1F1;
   color: #333;
+  
 }
 
 /*==Dropdown Menu==*/
 .sub-menu {
   display: none;
   position: absolute;
+  
 }
 #menu li {
   position: relative;
+  
 }
 #menu li:hover .sub-menu {
   display: block;
   z-index: 5;
+  
 }
 .sub-menu li {
   margin-left: 0 !important;
+  width: 697px !important;
+  
+  
 }
-
 /*==Menu cấp 3==*/
 .sub-menu ul li> ul {
   display: none !important;
+  position: absolute;
+  
 }
 
 .sub-menu:hover ul li{
   display: block;
   z-index: 6;
+  position: absolute;
+  border-left: 1px solid #45bbf7;
 }
 /* css quang cao */
 .size-quang-cao{
@@ -252,6 +267,10 @@ body {
 .form-search-right{
   height:200px;
   background-image: url('../images/search-bg.png');
+  border:solid 1px #bbb9b9;
+}
+.form-search-right-moi-gioi{
+  height:145px;
   border:solid 1px #bbb9b9;
 }
 .form-search-centre{

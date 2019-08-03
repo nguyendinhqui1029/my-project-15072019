@@ -1,6 +1,6 @@
 @extends('pages.master')
 
-@section('title',__('title_home'))
+@section('title',__('title-home'))
 
 @section('top-info')
   @include('modules.sub-modules.top-info')   
@@ -23,21 +23,28 @@
 @endsection
 
 @section('form-search')
-  {{-- @include('modules.sub-modules.form-search-center')    --}}
+ {{-- @include('modules.sub-modules.form-search') --}}
 @endsection
 
 @section('kinh-nghiem')
-  @include('modules.sub-modules.kinh-nghiem')   
+{{--@include('modules.sub-modules.kinh-nghiem')   --}}
 @endsection
 
 
 @section('bat-dong-san-noi-bat')
-  @include('modules.sub-modules.box-du-an-noi-bat')
-  @include('modules.sub-modules.bat-dong-san-noi-bat')   
+a
+{{-- @include('modules.sub-modules.card-employee.component-card') --}}
+{{-- @include('modules.sub-modules.nha-moi-gioi-danh-sach') --}}
 @endsection
 
 @section('news-right')
-  @include('modules.sub-modules.form-search-right')  
+
+{{-- @include('modules.sub-modules.news-right')    --}}
+@endsection
+
+@section('quick-link-right')
+@include('modules.sub-modules.form-search-right-moi-gioi')
+{{-- @include('modules.sub-modules.quick-link-right')    --}}
 @endsection
 
 @section('quang-cao-trai')
@@ -48,14 +55,10 @@
   @include('modules.sub-modules.quang-cao-phai')
 @endsection
 
-@section('nha-dat-theo-tinh-thanh-pho')
-{{-- @include('modules.sub-modules.main-card-employee') --}}
-@include('modules.sub-modules.nha-dat-khu-vuc')  
-@endsection
 @section('content')
   @include('modules.sub-modules.content')   
 @endsection
 
 @section('footer')
-  @include('modules.sub-modules.footer')
+@include('modules.sub-modules.footer')
 @endsection
