@@ -1,4 +1,17 @@
 {
-    "title-home": "Trang chủ",
-    "label-dia-diem": "Địa điểm"
+    "title_home": "Trang chủ",
+    "label_dia_diem": "Địa điểm",
+    "label_loai_tin": "Loại tin",
+    "label_tinh_thanh": "Tỉnh /Thành",
+    "label_huong": "Hướng",
+    "label_dien_tich": "Diện tích",
+    "label_loai_bds": "Loại BĐS",
+    "label_quan_huyen": "Quận/Huyện",
+    "label_muc_gia": "Mức giá",
+    "label_tim_kiem_nang_cao": "Tìm kiếm nâng cao",
+    "button_tim_kiem": "Tìm kiếm",
+    "title_kinh_nghiem": "KINH NGHIỆM",
+    "title_bat_dong_san_noi_bat": "BẤT ĐỘNG SẢN NỔI BẬT",
+    "title_tin_tuc": "Tin tức",
+    "title_lien_ket_nhanh": "Liên kết nhanh"
 }

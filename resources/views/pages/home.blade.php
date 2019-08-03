@@ -1,6 +1,6 @@
 @extends('pages.master')
 
-@section('title',__('title-home'))
+@section('title',__('title_home'))
 
 @section('top-info')
   @include('modules.sub-modules.top-info')   
