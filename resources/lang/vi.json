@@ -13,5 +13,9 @@
     "title_kinh_nghiem": "KINH NGHIỆM",
     "title_bat_dong_san_noi_bat": "BẤT ĐỘNG SẢN NỔI BẬT",
     "title_tin_tuc": "Tin tức",
-    "title_lien_ket_nhanh": "Liên kết nhanh"
+    "title_lien_ket_nhanh": "Liên kết nhanh",
+    "label_can_ban": "Cần bán",
+    "label_cho_thue": "Cho thuê",
+    "label_can_mua": "Cần mua",
+    "label_can_thue": "Cần thuê"
 }
