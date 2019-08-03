@@ -473,11 +473,6 @@ input[type=text], textarea, input[type=password] {
   .lang-box .compobox-lang li:hover .sub-lang{
     display: block;
   }
-<<<<<<< HEAD
-  
-
-  
-=======
 
   /* css cart */
   .cart-img{
@@ -493,4 +488,3 @@ input[type=text], textarea, input[type=password] {
 .border-box{
   border: 1px solid #bbb9b9;
 }
->>>>>>> e9d0d0e792c9125731e8d448b7c2f2ed0cf73275
