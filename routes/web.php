@@ -10,7 +10,7 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@home');
+Route::get('/', "HomeController@home");
 
 Route::get('/nha-moi-gioi', function () {
     return view('pages.nhamoigioi');
@@ -23,4 +23,7 @@ Route::get('/du-an', function () {
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
+});
+Route::get('/nha-dat-ban', function () {
+    return view('pages.nha-dat-ban');
 });

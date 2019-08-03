@@ -1,5 +1,5 @@
 <div class="bat-dong-san-noi-bat">
-        <div class="bat-dong-san-noi-bat-title">Bất động sản nổi bật</div>
+        <div class="bat-dong-san-noi-bat-title">{{__('title_bat_dong_san_noi_bat')}}</div>
         <div class="bat-dong-san-noi-bat-box">
                 <div class="row justify-content-start">
                         <div class="col-12 col-sm-6 col-md-12 col-lg-6">

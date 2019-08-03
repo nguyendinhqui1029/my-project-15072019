@@ -1,6 +1,6 @@
 <div class="quick-links">
         <div class="item">
-            <h4 class="title">Liên kết nhanh</h4>
+            <h4 class="title">{{__('title_lien_ket_nhanh')}}</h4>
             <ul>
                 <li><a href="#" title="ban dat da nang">Bán đất <b>Đà Nẵng</b></a></li>
                 <li><a href="#" title="ban dat binh duong">Bán đất <b>BÌNH DƯƠNG</b></a></li>
