@@ -1,4 +1,3 @@
- 
     <div class="navbar1">
         <div class="dropdown1">
             <a href="#home" class="dropbtn">HOME</a>
