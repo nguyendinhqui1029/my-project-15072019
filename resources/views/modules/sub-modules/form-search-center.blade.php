@@ -25,16 +25,16 @@
     @endslot
     {{-- add class css --}}
     {{-- data --}}
-        @section('dia-diem')
+        @slot('diadiem')
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                 <label class="label-form-search">{{__('label_dia_diem')}}</label>
             </div>
             <div class="col-10 col-sm-10 col-md-9 col-lg-10">
                 <input type="text" class="place" placeholder="Nhập địa điểm cần tìm" autocomplete="off">
             </div>
-        @endsection
+        @endslot
         {{-- loại tin và loại bất động sản --}}
-        @section('loai-tin-loai-bat-dong-san')
+        @slot('loaitin')
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                 <label class="label-form-search">{{__('label_loai_tin')}}</label>
             </div>
@@ -55,9 +55,9 @@
                     <option value="can-ban">---Loại BĐS---</option>
                 </select>
             </div>
-        @endsection
+        @endslot
         {{-- Tỉnh thành phố và quận huyện --}}
-        @section('tinh-thanh-pho-quan-huyen')
+        @slot('tinhthanhpho')
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                     <label class="label-form-search">{{__('label_tinh_thanh')}}</label>
             </div>
@@ -79,10 +79,10 @@
 
                 </select>
             </div>
-        @endsection
+        @endslot
 
         {{-- huong --}}
-        @section('huong')
+        @slot('huong')
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                     <label class="label-form-search">{{__('label_huong')}}</label> 
             </div>
@@ -91,10 +91,10 @@
                 <option value="can-ban">---Huong---</option>
             </select>
             </div>
-        @endsection
+        @endslot
 
         {{-- Diện tích và mức giá --}}
-        @section('dien-tich-muc-gia')
+        @slot('dientich')
             <div class="col-2 col-sm-2 col-md-3 col-lg-2">
                     <label class="label-form-search">{{__('label_dien_tich')}}</label>
             </div>
@@ -116,16 +116,16 @@
 
                 </select>
             </div>
-        @endsection
+        @endslot
         {{-- button tìm kiếm và link tìm kiếm năng cao --}}
-        @section('button-tim-kiem')
+        @slot('buttonsearch')
             <div class="col align-self-center offset-4">
                 <input name="" id="" class="btn btn-primary" type="button" value="{{__('button_tim_kiem')}}">
             </div>
             <div class="col align-self-end">
                 <a href="/tim-kiem-nang-cao.html" rel="nofollow">{{__('label_tim_kiem_nang_cao')}}</a>
             </div>
-        @endsection
+        @endslot
      {{-- data --}}
 @endcomponent
 {{-- css form search in center --}}

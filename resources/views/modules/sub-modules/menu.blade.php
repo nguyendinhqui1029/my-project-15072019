@@ -1,3 +1,4 @@
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
       <div class="row justify-content-start d-none d-sm-none d-lg-block d-md-block" id="menu">
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12 ">
             <ul>
@@ -96,6 +97,7 @@
         </div>
 
         
-    </div> 
+      </div> 
+</div>
    
     
