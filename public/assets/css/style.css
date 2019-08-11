@@ -265,7 +265,7 @@ body {
 }
 /*css form tìm kiếm*/
 .form-search-right{
-  height:200px;
+  height:180px;
   background-image: url('../images/search-bg.png');
   border:solid 1px #bbb9b9;
 }
@@ -487,4 +487,27 @@ input[type=text], textarea, input[type=password] {
 }
 .border-box{
   border: 1px solid #bbb9b9;
+}
+/* Phan trang */
+.container-data-phan-trang{
+  border: 1px solid #333;
+  border-radius: 50% 50%;
+  background-color: #e9e6e6;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  margin: 1px;
+}
+.container-data-phan-trang:hover {
+  color: #faf3f3;
+  background-color: #792a2a;
+}
+.container-data-phan-trang:hover .data-content{
+  color: #faf3f3;
+}
+.data-content{
+  color: #141414;
+  text-decoration: none !important;
+  padding: 3px;
+  line-height: 30px;
 }
