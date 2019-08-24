@@ -18,9 +18,18 @@
 @slot('classContentImageTop')
 {{$boxClass->classContentImageTop}}
 @endslot
+@slot('classContentImage')
+{{$boxClass->classContentImage}}
+@endslot
 @slot('classParentCart')
 {{$boxClass->classParentCart}}
 @endslot
+@slot('classContentTieude')
+{{$boxClass->classContentTieude=' d-none'}}
+@endslot
+@slot('classContent')
+@endslot
+
 {{-- Add class for box --}}
 
 {{-- Add data for box --}}
@@ -33,6 +42,9 @@
             @endslot
             @slot('contentURLImage')
                anh-noi-bat.png
+            @endslot
+            @slot('content')
+           
             @endslot
         {{-- data for Title and see more --}}
         {{-- data for card --}}

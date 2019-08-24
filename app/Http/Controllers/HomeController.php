@@ -10,6 +10,7 @@ use App\Classes\DataCard;
 use App\Classes\FormSearch;
 use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
+use App\Classes\FormTimKiem;
 class HomeController extends Controller
 {
    public function home(){
@@ -40,9 +41,10 @@ class HomeController extends Controller
     // all component header
     $listContentMaster =[
         new ContentMaster(true,"mb-2",["modules.sub-modules.form-search-center","modules.sub-modules.kinh-nghiem"]),
-        new ContentMaster(true,"",["modules.sub-modules.box-du-an-noi-bat",
-        ["modules.sub-modules.news-right","modules.sub-modules.box-right-du-an","modules.sub-modules.box-right-du-an1"]]),
-        new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"])
+        new ContentMaster(true,"",["1"=>["modules.sub-modules.box-du-an-noi-bat"],
+        "2"=>["modules.sub-modules.news-right","modules.sub-modules.box-right-du-an","modules.sub-modules.box-right-du-an1"]]),
+        new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"]),
+        new ContentMaster(false,"mb-1",["modules.sub-modules.phan-trang"])
     ];
     // all component header
        $listData =[
