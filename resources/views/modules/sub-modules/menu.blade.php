@@ -72,19 +72,19 @@
               </button>
               <div class="dropdown1-content">   
                 <div class="row">
-                  <div class="column  d-flex bd-highlight ">
-                    <a href="#">Căn hộ/Chung cư</a>
-                    <a href="#">Khu biệt thự</a>
-                    <a href="#">Nhà phố</a>
-                    <a href="#">Cao ốc văn phòng</a>
-                    <a href="#">Khu thương mại</a>
-                    <a href="#">Khu dân cư</a>
-                    <a href="#">Nhà ở xã hội</a>
-                    <a href="#">Khu đô thị mới</a>
-                    <a href="#">Khu tái định cư</a>
-                    <a href="#">Khu phức hợp</a>
-                    <a href="#">Căn hộ dịch vụ</a>
-                    <a href="#">Khu nghĩ dưỡng</a>
+                  <div class="column flex-column d-flex bd-highlight ">
+                    <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Căn hộ/Chung cư</a></div>
+                    <div class="p-2 border-bottom bd-highlight">  <a href="#"><i class="icon-home"></i> Khu biệt thự</a></div>
+                    <div class="p-2 border-bottom bd-highlight"><a href="#"><i class="icon-home"></i> Nhà phố</a></div>
+                    <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Cao ốc văn phòng</a></div>
+                    <div class="p-2 border-bottom bd-highlight">  <a href="#"><i class="icon-home"></i> Khu thương mại</a></div>
+                    <div class="p-2 border-bottom bd-highlight"><a href="#"><i class="icon-home"></i> Khu dân cư</a></div>
+                    <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Nhà ở xã hội</a></div>
+                    <div class="p-2 border-bottom bd-highlight">  <a href="#"><i class="icon-home"></i> Khu đô thị mới</a></div>
+                    <div class="p-2 border-bottom bd-highlight"><a href="#"><i class="icon-home"></i>  Khu tái định cư</a></div>
+                    <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Khu phức hợp</a></div>
+                    <div class="p-2 border-bottom bd-highlight">  <a href="#"><i class="icon-home"></i> Căn hộ dịch vụ</a></div>
+                    <div class="p-2 border-bottom bd-highlight"><a href="#"><i class="icon-home"></i> Khu nghĩ dưỡng</a></div>
                   </div>
                 </div>
               </div>
@@ -101,19 +101,19 @@
                 </button>
                 <div class="dropdown1-content">   
                   <div class="row">
-                    <div class="column  d-flex bd-highlight ">
-                      <a href="#">Nhà đẹp</a>
-                      <a href="#"> - Nhà ống</a>
-                      <a href="#"> - Nhà cấp 4</a>
-                      <a href="#"> - Biệt thự</a>
-                      <a href="#"> - Chung cư</a>
-                      <a href="#"> - Văn phòng</a>
-                      <a href="#">Ngoại thất</a>
-                      <a href="#">Nội thất</a>
-                      <a href="#"> - Phòng khách</a>
-                      <a href="#"> - Phòng ngủ</a>
-                      <a href="#"> - Phòng bếp</a>
-                      <a href="#"> - Phòng tắm</a>
+                    <div class="column flex-column d-flex bd-highlight ">
+                      <div class="p-2 border-bottom bd-highlight" ><a href="#"> Nhà đẹp</a></div>
+                      <div class="p-2 border-bottom bd-highlight">  <a href="#"> - Nhà ống</a></div>
+                      <div class="p-2 border-bottom bd-highlight"><a href="#"> - Nhà cấp 4</a></div>
+                      <div class="p-2 border-bottom bd-highlight" ><a href="#"> - Biệt thự</a></div>
+                      <div class="p-2 border-bottom bd-highlight">  <a href="#"> - Chung cư</a></div>
+                      <div class="p-2 border-bottom bd-highlight"><a href="#"> - Văn phòng</a></div>
+                      <div class="p-2 border-bottom bd-highlight" ><a href="#"> Ngoại thất</a></div>
+                      <div class="p-2 border-bottom bd-highlight">  <a href="#"> Nội thất</a></div>
+                      <div class="p-2 border-bottom bd-highlight"><a href="#">  - Phòng khách</a></div>
+                      <div class="p-2 border-bottom bd-highlight" ><a href="#"> - Phòng ngủ</a></div>
+                      <div class="p-2 border-bottom bd-highlight">  <a href="#"> - Phòng bếp</a></div>
+                      <div class="p-2 border-bottom bd-highlight"><a href="#"> - Phòng tắm</a></div>
                     </div>
                   </div>
                 </div>
@@ -127,9 +127,9 @@
                   </button>
                   <div class="dropdown1-content">   
                     <div class="row">
-                      <div class="column1  d-flex bd-highlight ">
-                        <a href="#">Xem bảng đồ</a>
-                        <a href="#">Bán xe hơi cũ</a>
+                      <div class="column flex-column d-flex bd-highlight">
+                        <div class="p-2 border-bottom bd-highlight">  <a href="#"> Xem bảng đồ</a></div>
+                      <div class="p-2 border-bottom bd-highlight"><a href="#"> Bán xe hơi cũ</a></div>
                       </div>
                     </div>
                   </div>

@@ -1,5 +1,6 @@
 {
     "title_home": "Home",
+    "title_nha_dep": "Nice house",
     "label_dia_diem": "Place",
     "label_loai_tin": "Type of news",
     "label_tinh_thanh": "City",
@@ -10,7 +11,7 @@
     "label_muc_gia": "Price",
     "label_tim_kiem_nang_cao": "Advanced search",
     "button_tim_kiem": "SEARCH",
-    "title_kinh_nghiem": "EXPERIENCE",
+    "title_kinh_nghiem": "Experience",
     "title_bat_dong_san_noi_bat": "HIGHLIGHTS REAL ESTATE",
     "title_tin_tuc": "News",
     "title_lien_ket_nhanh": "Quick link",
@@ -18,5 +19,7 @@
     "label_can_ban": "For sale",
     "label_cho_thue": "Lease",
     "label_can_mua": "Need to buy",
-    "label_can_thue": "Need lease"
+    "label_can_thue": "Need lease",
+    "title_danh_sach_nmg": "List of real estate brokers nationwide",
+    "title_thi_truong": "Market"
 }

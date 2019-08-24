@@ -12,9 +12,11 @@
 */
 Route::get('/', "HomeController@home");
 
-Route::get('/nha-moi-gioi', function () {
-    return view('pages.nhamoigioi');
-});
+
+Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
+
+Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
+Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
 
 Route::get('/du-an', function () {
     return view('pages.project');

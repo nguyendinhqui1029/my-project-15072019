@@ -10,7 +10,7 @@ class BoxRightMaster{
    public $classBoxData;
    public $classLinkData;
    public $data = [];
-   function __construct($data,$classContainer=" d-flex flex-column bd-highlight mb-3 border-right",
+   function __construct($data,$classContainer=" d-flex flex-column bd-highlight mb-3",
     $classBoxTitle=" p-2 bd-highlight",
     $classTitle ="",
     $contentTitle="Liên kết nổi bật",
