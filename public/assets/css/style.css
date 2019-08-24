@@ -264,6 +264,43 @@ body {
   text-decoration: underline !important;
 }
 /*css form tìm kiếm*/
+.tittel{
+  font-size: 14px;
+  background-color: #0090B5;
+  color: #fff;
+  padding: 0.5rem !important;
+
+}
+.tittell{
+  font-size: 14px;
+  background-color: #0090B5;
+  color: #fff;
+  padding: 0.5rem !important;
+  margin-top: 10px;
+}
+.formdanhsach{
+  
+  border:dashed 1px #e0e0e0;
+  background-color: #fff;
+}
+.formdanhsach1{
+  background-color: #fff;
+}
+.contennd{
+  margin-top: 5px;
+}
+.ten{
+  color: #0099CC;
+}
+.phone{
+  color: #0090b5
+}
+.phone1{
+  color: red;
+}
+.diachi{
+  font-weight: bold;
+}
 .form-search-right{
   height:180px;
   background-image: url('../images/search-bg.png');
@@ -285,6 +322,7 @@ body {
   background-color: #fff;
   font-size: 12px;
   font-family: Arial,Verdana,sans-serif;
+  
 }
 .form-search-centre:hover{
   box-shadow:none;
@@ -510,4 +548,61 @@ input[type=text], textarea, input[type=password] {
   text-decoration: none !important;
   padding: 3px;
   line-height: 30px;
+}
+/* tin tức nổi baacn kinh nghiệm */
+.border-header{
+  padding: 0px !important;
+  background-color: #d13d3d;
+}
+.border-header1{
+  padding: 0px !important;
+  background-color: #0090B5;
+}
+.text-color{
+  color: #FFF;
+  font-weight: bold;
+  font-size: 14px;
+}
+.border1{
+  border: 1px solid #d13d3d;
+  margin-top: 10px;
+}
+.border2{
+  border: 1px solid #0090B5;
+  margin-top: 10px;
+}
+.line-heigh {
+  line-height: 25px;
+  
+}
+.color-heard a {
+  color: #141414 !important;
+  text-decoration: none;
+  
+}
+.color-heard  {
+  border-bottom: 1px dotted #cccccc;
+  
+}
+.heigh-img{
+  height: 400px;
+  
+}
+.heigh-image-right{
+  height: 200px;
+}
+.color-heard1 a{
+  color: #1a9e54 !important;
+  text-decoration: none !important;
+}
+.titleaa{
+  border: 1px solid #cccccc;
+  padding: 0.5rem !important;
+  color: #FFF;
+  background-color: #0090B5;
+  font-weight: bold;
+  font-size: 14px;
+}
+.contenthitruong{
+  border: 1px solid #cccccc;
 }

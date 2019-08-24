@@ -1,31 +1,40 @@
 @foreach ($listContentMaster as $contentMaster)
         @if ($contentMaster->isClassContainerRow)
         <div class="row {{$contentMaster->classCssContainerRow}}">
-                @foreach ($contentMaster->listUrlComponent as $items)
-                        @if (is_array($items))
-                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                                        @foreach ($items as $item)
-                                                @include($item) 
-                                        @endforeach
-                        </div>
+                        
+                @foreach ($contentMaster->listUrlComponent as $key=> $value)
+                        @if (is_array($value))
+                                @if($key ==1)
+                                        <div class="col-12 col-sm-12 col-md-8 col-lg-8">
+                                                        @foreach ($value as $item)
+                                                                @include($item) 
+                                                        @endforeach
+                                        </div>
+                                 @else
+                                        <div class="col-12 col-sm-12 col-md-4 col-lg-4">
+                                                        @foreach ($value as $item)
+                                                                @include($item) 
+                                                        @endforeach
+                                        </div>
+                                @endif
                         @else
-                                @include($items) 
+                                 @include($value) 
                         @endif
                        
                 @endforeach
         </div>
         @else
                 <div class="{{$contentMaster->classCssContainerRow}}">
-                        @foreach ($contentMaster->listUrlComponent as $items)
-                                @if (is_array($items))
+                        @foreach ($contentMaster->listUrlComponent as $value)
+                                @if (is_array($value))
                                 <div class="col-12 col-sm-12 col-md-4 col-lg-4">
-                                        @foreach ($items as $item)
+                                        @foreach ($value as $item)
                                                 @include($item) 
                                         @endforeach
                                 </div>
 
                                 @else
-                                        @include($items) 
+                                        @include($value) 
                                 @endif
                         @endforeach
                 </div>

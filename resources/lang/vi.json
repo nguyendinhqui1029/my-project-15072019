@@ -1,5 +1,6 @@
 {
     "title_home": "Trang chủ",
+    "title_nha_dep": "Nhà đẹp",
     "label_dia_diem": "Địa điểm",
     "label_loai_tin": "Loại tin",
     "label_tinh_thanh": "Tỉnh /Thành",
@@ -10,7 +11,7 @@
     "label_muc_gia": "Mức giá",
     "label_tim_kiem_nang_cao": "Tìm kiếm nâng cao",
     "button_tim_kiem": "Tìm kiếm",
-    "title_kinh_nghiem": "KINH NGHIỆM",
+    "title_kinh_nghiem": "Kinh nghiệm",
     "title_bat_dong_san_noi_bat": "BẤT ĐỘNG SẢN NỔI BẬT",
     "title_tin_tuc": "Tin tức",
     "title_lien_ket_nhanh": "Liên kết nhanh",
@@ -18,5 +19,7 @@
     "label_cho_thue": "Cho thuê",
     "label_can_mua": "Cần mua",
     "label_can_thue": "Cần thuê",
-    "title_xem_them": "Xem thêm..."
+    "title_xem_them": "Xem thêm...",
+    "title_danh_sach_nmg": "Danh sách nhà môi giới bất động sản trên toàn quốc",
+    "title_thi_truong": "Thị trường"
 }

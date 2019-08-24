@@ -14,6 +14,8 @@ class BoxDuAnNoiBat{
     public $classImage;
     public $classCartTitle;
     public $classContent;
+    public $classContentImage;
+    
     function __construct(
          $classContainerParent="mt-2 mr-3",
          $classContainerParentHeader="d-flex bd-highlight bg-primary mb-1 border-box",
@@ -27,7 +29,9 @@ class BoxDuAnNoiBat{
          $classCartImage="p-2 bd-highlight",
          $classImage="cart-img",
          $classCartTitle="pl-2 bd-highlight text-center",
-         $classContent="pl-2 w-100 bd-highlight text-content"
+         $classContent="pl-2 w-100 bd-highlight text-content",
+         $classContentImage= "heigh-img"
+        
     ){
         $this->classContainerParent=$classContainerParent;
         $this->classContainerParentHeader=$classContainerParentHeader;
@@ -42,5 +46,6 @@ class BoxDuAnNoiBat{
         $this->classImage=$classImage;
         $this->classCartTitle=$classCartTitle;
         $this->classContent=$classContent;
+        $this->classContentImage=$classContentImage;
     }
 }
