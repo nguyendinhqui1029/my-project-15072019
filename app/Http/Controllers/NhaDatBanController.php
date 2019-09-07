@@ -10,6 +10,8 @@ use App\Classes\DataCard;
 use App\Classes\FormSearch;
 use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
+use Illuminate\Support\Facades\DB;
+
 class NhaDatBanController extends Controller
 {
    public function nhadatban(){
@@ -56,13 +58,15 @@ class NhaDatBanController extends Controller
      new DataBoxRight("aaa","aaa")
  ];
 
+    $listProduct = DB::select('select * from sanpham');
     
-        $var= \View::make('pages.nhadatban',["boxright" => new BoxRightMaster($ds),
-        "boxright1" => new BoxRightMaster($ds2),
+    $var= \View::make('pages.nhadatban',["boxright" => new BoxRightMaster($ds),
+    "boxright1" => new BoxRightMaster($ds2),
      "boxClass"=>new BoxDuAnNoiBat(),
      "formSearchClass"=> new FormSearch(),
      "listHeaderMaster"=>$listHeaderMaster,
      "listContentMaster"=>$listContentMaster,
+     "listProduct"=>$listProduct
      ]);
      return $var;
     }

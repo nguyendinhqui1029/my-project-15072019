@@ -1,7 +1,6 @@
 @foreach ($listContentMaster as $contentMaster)
         @if ($contentMaster->isClassContainerRow)
         <div class="row {{$contentMaster->classCssContainerRow}}">
-                        
                 @foreach ($contentMaster->listUrlComponent as $key=> $value)
                         @if (is_array($value))
                                 @if($key ==1)
