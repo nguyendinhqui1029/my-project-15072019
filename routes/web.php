@@ -19,8 +19,10 @@ Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
 Route::get('/nha-dat-ban',"NhaDatBanController@nhadatban" );
 
-
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
 });
+
+
+// trang nhà mua giới
