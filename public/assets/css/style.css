@@ -609,7 +609,6 @@ input[type=text], textarea, input[type=password] {
 }
 .content-box{
   margin-top: 25px;
-  border: 1px solid #E0E0E0;
   border-left: none;
   /* border-right: none; */
   padding: 10px 5px 5px 5px;
@@ -648,8 +647,6 @@ input[type=text], textarea, input[type=password] {
 }
 .content-right{
   margin-top: 25px;
-  border: 1px solid #E0E0E0;
-  border-left: none;
 
   padding: 10px 5px 5px 5px;
 }
@@ -670,4 +667,8 @@ input[type=text], textarea, input[type=password] {
 }
 .itemm1{
   margin-bottom:155px; 
+}
+.content-lienhe{
+  border: 1px solid #bbb9b9;
+  margin-top: 35px;
 }

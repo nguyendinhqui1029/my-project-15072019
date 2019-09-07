@@ -32,8 +32,9 @@ class LienHeGopYController extends Controller
  // all component header
  $listContentMaster =[
      //new ContentMaster(true,"mb-2",["modules.sub-modules.form-search-center","modules.sub-modules.kinh-nghiem"]),
-     new ContentMaster(true,"mb-1",["1"=>["modules.sub-modules.thong-tin-gop-y"],
-     "2"=>["modules.sub-modules.ho-tro-truc-tuyen"]]),
+    //  new ContentMaster(true,"mb-1",["1"=>["modules.sub-modules.thong-tin-gop-y"],
+    //  "2"=>["modules.sub-modules.ho-tro-truc-tuyen"]]),
+    new ContentMaster(false,"mb-1",["modules.sub-modules.lien-he-gop-y"]),
      new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"]),
      new ContentMaster(false,"mb-1",["modules.sub-modules.phan-trang"])
  ];
