@@ -627,7 +627,6 @@ input[type=text], textarea, input[type=password] {
 .contenthitruong{
   border: 1px solid #cccccc;
 }
-<<<<<<< HEAD
 .content-box{
   margin-top: 25px;
   border-left: none;
@@ -692,7 +691,7 @@ input[type=text], textarea, input[type=password] {
 .content-lienhe{
   border: 1px solid #bbb9b9;
   margin-top: 35px;
-=======
+}
 /* css mua ban nha dat,bds */
 .background-mua-ban-nha-dat{
   background-color: #0090b5 !important;
@@ -708,6 +707,5 @@ input[type=text], textarea, input[type=password] {
   margin-bottom: 5px;
   color: #1579a8;
   width: 678px;
-  line-height: 25px
->>>>>>> 53cfb729a5ec476642c65a932eb4360f0a17744e
+  line-height: 25px;
 }
