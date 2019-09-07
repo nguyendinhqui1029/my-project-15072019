@@ -1,5 +1,5 @@
 {{-- @extends('modules.sub-modules.form-search.form-search') --}}
-
+<div class="col-12 col-sm-12 col-md-6 col-lg-6">
 @component('modules.sub-modules.form-search.form-search-master')
     {{-- add class css --}}
     @slot('classContainerFormSearch')
@@ -129,7 +129,7 @@
      {{-- data --}}
 @endcomponent
 {{-- css form search in center --}}
-
+</div>
 
 
 

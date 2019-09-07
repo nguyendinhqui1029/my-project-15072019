@@ -3,12 +3,12 @@
         d-flex flex-column bd-highlight mb-3 border-right
         @endslot
         @slot('classBoxTitle')
-        p-2 bd-highlight
+        mt-2 pt-2 background-mua-ban-nha-dat
         @endslot
         @slot('classTitle')
         @endslot
         @slot('contentTitle')
-        Nhà đất khu vực
+        Mua bán nhà đất, bất động sản
         @endslot
         @slot('classBoxData')
         p-2 bd-highlight

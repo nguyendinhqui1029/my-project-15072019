@@ -1,4 +1,3 @@
-<div class="col-12 col-sm-12 col-md-6 col-lg-6">
         <div class="{{$classContainerFormSearch}}">
                 <form method="POST">
                         <!-- dia diem -->
@@ -36,5 +35,4 @@
                         <!--dòng 6, nút-->
                 </form>
         </div>
-</div>
 
