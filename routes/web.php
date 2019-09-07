@@ -17,15 +17,10 @@ Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
 
 Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
+Route::get('/nha-dat-ban',"NhaDatBanController@nhadatban" );
 
-Route::get('/du-an', function () {
-    return view('pages.project');
-});
 
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
-});
-Route::get('/nha-dat-ban', function () {
-    return view('pages.nha-dat-ban');
 });
