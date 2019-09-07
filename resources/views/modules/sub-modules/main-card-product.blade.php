@@ -58,6 +58,9 @@
         @slot('floor')
             {{$floor}}
         @endslot
+        @slot('diningroom')
+            {{$diningroom}}
+        @endslot
     @endcomponent
     @endslot
     @slot('evaluate')
