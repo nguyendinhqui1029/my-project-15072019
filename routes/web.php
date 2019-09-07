@@ -12,18 +12,17 @@
 */
 Route::get('/', "HomeController@home");
 
-Route::get('/nha-moi-gioi', function () {
-    return view('pages.nhamoigioi');
-});
 
-Route::get('/du-an', function () {
-    return view('pages.project');
-});
+Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
+
+Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
+Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
+Route::get('/nha-dat-ban',"NhaDatBanController@nhadatban" );
 
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
 });
-Route::get('/nha-dat-ban', function () {
-    return view('pages.nha-dat-ban');
-});
+
+
+// trang nhà mua giới
