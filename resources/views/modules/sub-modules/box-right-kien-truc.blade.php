@@ -1,3 +1,22 @@
+@component('modules.sub-modules.box-right.box-right-master')
+@slot('classContainer')
+{{$boxright1->classContainer." border2"}}
+{{-- d-flex flex-column bd-highlight mb-3 border-right --}}
+@endslot
+@slot('classBoxTitle')
+{{$boxright1->classBoxTitle." border-header1"}}
+{{-- p-2 bd-highlight --}}
+@endslot
+@slot('classTitle')
+{{$boxright1->classTitle." text-center pt-2 text-color"}}
+@endslot
+@slot('contentTitle')
+{{$boxright1->contentTitle= "Nhà đẹpp"}}
+@endslot
+@slot('classColumnBoxData')
+@endslot
+
+@slot('data')
 @component('modules.sub-modules.box-du-an-noi-bat.box-du-an-noi-bat-master')
 {{-- Add class for box --}}
 @slot('classContainerParent')
@@ -227,3 +246,13 @@ col-lg-12 col-12
         {{-- data for card --}}
 {{-- Add data for box --}}
 @endcomponent
+@endslot
+@endcomponent
+
+
+
+
+
+
+
+
