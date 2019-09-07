@@ -5,7 +5,7 @@
             <div class="col-10">
                 <div class="ml-2">
                     <span style="color:red; font-weight: bold;">
-                            TUI BÁN GẤP NHÀ TRỌ GỒM 32 PHÒNG VÀ ĐẤT GẦN KCN NHẬT MỸ TRƯỜNG HỌC CHỢ chỉ 390TR MUA ĐƯỢC 
+                        {{$title}}
                     </span>
                 </div>
             </div>
@@ -14,16 +14,51 @@
         <div class="row">
                 @component('modules.sub-modules.card-employee.evaluate-card-employee')
                     @slot('idProduct')
-                    {{$id}} 
+                        {{$id}} 
                     @endslot 
                 @endcomponent
         </div>
     @endslot
     @slot('image')
-        @include('modules.sub-modules.card-employee.image-card-employee')
+        @component('modules.sub-modules.card-employee.image-card-employee')
+            @slot('imageName')
+                {{$imageName}}
+            @endslot
+        @endcomponent
     @endslot
     @slot('content')
-        @include('modules.sub-modules.card-product.content-card-product')
+        @component('modules.sub-modules.card-product.content-card-product')
+        @slot('subContent')
+            {{$subContent}}
+        @endslot
+        @slot('parking')
+            {{$parking}}
+        @endslot
+        @slot('street')
+            {{$street}}
+        @endslot
+        @slot('acreage')
+            {{$acreage}}
+        @endslot
+        @slot('size')
+            {{$size}}
+        @endslot
+        @slot('direction')
+            {{$direction}}
+        @endslot
+        @slot('price')
+            {{$price}}
+        @endslot
+        @slot('address')
+            {{$address}}
+        @endslot
+        @slot('bedroom')
+            {{$bedroom}}
+        @endslot
+        @slot('floor')
+            {{$floor}}
+        @endslot
+    @endcomponent
     @endslot
     @slot('evaluate')
         

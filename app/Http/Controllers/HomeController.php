@@ -11,6 +11,7 @@ use App\Classes\FormSearch;
 use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
 use App\Classes\FormTimKiem;
+use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
    public function home(){
@@ -54,7 +55,6 @@ class HomeController extends Controller
            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt"),
            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt")
        ];
-    
         $var= \View::make('pages.home',["boxright" => new BoxRightMaster($ds),
         "boxright1" => new BoxRightMaster($ds2),
         "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listData,
