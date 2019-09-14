@@ -14,20 +14,19 @@
 {{$boxright1->contentTitle= "Tin nhiều người đọc"}}
 @endslot
 @slot('classColumnBoxData')
-
 @endslot
 
 @slot('data')
     @foreach ($boxright1->data as $item )
         @component('modules.sub-modules.box-right.data-box-right')
             @slot('link')
-                {{$item->link=" "}}
+                {{$item->link="d-none "}}
             @endslot
             @slot('noidung')
                <div style="margin:0px; padding:0px;"> <img width="8px;" src='assets/images/icon.png'/>{{$item->noidung}} </div>
             @endslot
             @slot('classBoxData')
-            {{$boxright1->classBoxData=" col-lg-12"}}
+            {{$boxright1->classBoxData=" col-lg-12 "}}
             @endslot
             @slot('classLinkData')
             {{$boxright1->classLinkData=' bd-highlight line-heigh'}}

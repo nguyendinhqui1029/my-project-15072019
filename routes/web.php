@@ -17,6 +17,7 @@ Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
 
 Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
+Route::get('/lienhe-gopy',"LienHeGopYController@lienhegopy" );
 
 Route::get('/du-an', function () {
     return view('pages.project');
