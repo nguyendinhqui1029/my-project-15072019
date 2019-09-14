@@ -7,18 +7,17 @@
 </div>
 <div class="row" style="margin-left: 15px;margin-top: 5px;">
     <div class="col-6 col-sm-6 col-md-6 col-lg-4">
-        <b> <i class="icon-female"></i> Diện tích: {{$acreage}} m<sup>2</sup> </b>
-    </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
         <b> <i class="icon-female"></i> Phòng ngủ: {{$bedroom}} </b>
     </div>
     <div class="col-6 col-sm-6 col-md-6 col-lg-4">
         <b> <i class="icon-female"></i> Phong ăn: {{$diningroom}} </b>
     </div>
-    <div class="col-6 col-sm-6 col-md-6 col-lg-12">
+    <div class="col-6 col-sm-6 col-md-6 col-lg-4">
         <b> <i class="icon-female" ></i> Số tầng: {{$floor}} </b>
     </div>
-    
+    <div class="col-6 col-sm-6 col-md-6 col-lg-12">
+        <b> <i class="icon-female"></i> Diện tích: {{$acreage}} m<sup>2</sup> </b>
+    </div>
 </div>
 <div class="row" style="margin-left: 15px;margin-top: 5px;">
     <div class="col-6 col-sm-6 col-md-6 col-lg-4">
