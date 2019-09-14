@@ -3,7 +3,7 @@
         {{$boxright->classContainer}}
         @endslot
         @slot('classBoxTitle')
-        {{$boxright->classBoxTitle}}
+        {{$boxright->classBoxTitle= " mt-2 pt-2 background-mua-ban-nha-dat"}}
         @endslot
         @slot('classTitle')
         {{$boxright->classTitle}}

@@ -19,14 +19,11 @@ Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
 Route::get('/lienhe-gopy',"LienHeGopYController@lienhegopy" );
 
-Route::get('/du-an', function () {
-    return view('pages.project');
-});
+Route::get('/nha-dat-ban',"NhaDatBanController@nhadatban" );
+Route::get('/nha-dat-cho-thue',"NhaDatChoThueController@nhadatchothue" );
+
 
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
-});
-Route::get('/nha-dat-ban', function () {
-    return view('pages.nha-dat-ban');
 });

@@ -1,3 +1,4 @@
+<div class="col-12 col-sm-12 col-md-12 col-lg-12">
 @component('modules.sub-modules.form-search.form-search-master')
     {{-- add class css --}}
     @slot('classContainerFormSearch')
@@ -85,14 +86,15 @@
             </select>
         </div>
         <div class="col-6 col-sm-6 col-md-6 col-lg-6 d-flex justify-content-end">
-                <input style="width:115px; height: 25px;" class="dange" type="button" value="{{__('button_tim_kiem')}}">
+                <input class="buttonfind" type="button" value="{{__('button_tim_kiem')}}">
         </div>
     @endslot
     {{-- button tìm kiếm và link tìm kiếm năng cao --}}
     @slot('buttonsearch')
         <div class="col-12 col-sm-12 col-md-12 col-lg-12 d-flex justify-content-end">
-            <a rel="nofollow" style="font-size: 14px;">{{__('label_tim_kiem_nang_cao')}}</a>
+            <a rel="nofollow" class="findadvandge">{{__('label_tim_kiem_nang_cao')}}</a>
         </div>
     @endslot
 @endcomponent
+    </div>
 

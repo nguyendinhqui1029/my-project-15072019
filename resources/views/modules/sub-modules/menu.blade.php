@@ -1,6 +1,6 @@
     <div class="navbar1">
         <div class="dropdown1">
-            <a href="#home" class="dropbtn">HOME</a>
+            <a href="{{ url('/') }}" class="dropbtn">HOME</a>
     </div>
         <div class="dropdown1">
           <button class="dropbtn">NHÀ ĐẤT BÁN 
@@ -9,7 +9,7 @@
           <div class="dropdown1-content">   
             <div class="row">
                 <div class="column flex-column d-flex bd-highlight ">
-                    <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Bán nhà</a></div>
+                    <div class="p-2 border-bottom bd-highlight" ><a href="{{ url('nha-dat-ban') }}"><i class="icon-home"></i> Bán nhà</a></div>
                     <div class="p-2 border-bottom bd-highlight">  <a href="#"><i class="icon-home"></i> Bán nhà mặt tiền</a></div>
                     <div class="p-2 border-bottom bd-highlight"><a href="#"><i class="icon-home"></i>  Bán nhà trong hẻm</a></div>
                     <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Bán biệt thự, nhà liền kề</a></div>
@@ -41,7 +41,7 @@
             <div class="dropdown1-content">   
               <div class="row">
                   <div class="column flex-column d-flex bd-highlight ">
-                      <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Cho thuê nhà</a></div>
+                      <div class="p-2 border-bottom bd-highlight" ><a href="{{ url('nha-dat-cho-thue') }}"><i class="icon-home"></i> Cho thuê nhà</a></div>
                       <div class="p-2 border-bottom bd-highlight">  <a href="#"><i class="icon-home"></i> Cho thuê nhà mặt tiền</a></div>
                       <div class="p-2 border-bottom bd-highlight"><a href="#"><i class="icon-home"></i>  Cho thuê nhà trong hẻm</a></div>
                       <div class="p-2 border-bottom bd-highlight" ><a href="#"><i class="icon-home"></i> Cho thuê biệt thự, nhà liền kề</a></div>
@@ -89,10 +89,10 @@
               </div>
             </div> 
             <div class="dropdown1">
-                <a href="#home" class="dropbtn">NHÀ MÔI GIỚI</a>
+                <a href="{{ url('nha-moi-gioi') }}" class="dropbtn">NHÀ MÔI GIỚI</a>
             </div>
             <div class="dropdown1">
-                <a href="#home" class="dropbtn">KINH NGHIÊM</a>
+                <a href="{{ url('kinh-nghiem') }}" class="dropbtn">KINH NGHIÊM</a>
             </div>
             <div class="dropdown1">
                 <button class="dropbtn">MẪU NHÀ ĐẸP
@@ -101,7 +101,7 @@
                 <div class="dropdown1-content">   
                   <div class="row">
                     <div class="column flex-column d-flex bd-highlight">
-                      <div class="p-2 border-bottom bd-highlight" ><a href="#"></i> Nhà đẹp</a></div>
+                      <div class="p-2 border-bottom bd-highlight" ><a href="{{ url('mau-nha-dep') }}"></i> Nhà đẹp</a></div>
                       <div class="p-2 border-bottom bd-highlight">  <a href="#"></i> - Nhà ống</a></div>
                       <div class="p-2 border-bottom bd-highlight"><a href="#"></i>-  Nhà cấp 4</a></div>
                       <div class="p-2 border-bottom bd-highlight" ><a href="#"></i> - Biệt thự</a></div>
@@ -118,6 +118,6 @@
                 </div>
               </div> 
               <div class="dropdown1">
-                      <a href="#home" class="dropbtn">LIÊN HỆ - GÓP Ý</a>
+                      <a href="{{ url('lienhe-gopy') }}" class="dropbtn">LIÊN HỆ - GÓP Ý</a>
               </div>
       </div>

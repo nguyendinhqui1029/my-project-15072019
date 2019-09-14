@@ -3,7 +3,7 @@
         <div class="col-12 col-sm-12 col-md-12 col-xl-10 col-lg-10">
             <div class="top-info">
                 <ul>
-                    <img src="assets/images/new.gif" class="img-info-top"> Hỗ trợ đăng tin:
+                    <img src="assets/images/new.gif" class="img-info-top"> <span class="support"> Hổ trợ đăng tin:</span>
                     <li><span class="name">Ms.Trang</span> - <span class="number">0937.912.433</span></li>
                     <li><span class="name">Ms.Nguyên</span> - <span class="number">0945.243.197</span></li>
                     <li><span class="name">Ms.Liên</span> - <span class="number">0967.827.722</span></li>

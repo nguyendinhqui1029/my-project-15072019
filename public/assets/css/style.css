@@ -181,7 +181,7 @@ body {
   margin: 3px;
 }
 .top-info{
-  background-color: #5398c1;
+  background-color: #132692;
 }
 .top-info ul{
   margin: 5px;
@@ -196,11 +196,17 @@ body {
   border-right: none;
 }
 .top-info ul li .name{
-  color: #E8FF42
+  color: #fffc42
 }
 
 .top-info ul li .number{
-  color: #0fbaf5
+  color: hsl(0, 0%, 100%)
+}
+.help a{
+  color: hsl(0, 0%, 100%)
+}
+.support {
+  color: hsl(0, 0%, 100%)
 }
 /* Kinh nghiem */
 .slides_container{
@@ -301,10 +307,24 @@ body {
 .diachi{
   font-weight: bold;
 }
+/* tim kiem trong form search right */
+.buttonfind{
+  width:115px;
+  height: 25px;
+  background-color: rgb(202, 68, 68) !important;
+  color: #fff;
+  }
+  .findadvandge{
+  font-size: 14px;
+  color: rgb(20, 43, 255) !important;
+  font-weight: bold;
+    }
 .form-search-right{
   height:180px;
   background-image: url('../images/search-bg.png');
   border:solid 1px #bbb9b9;
+  box-shadow: 5px 5px 5px rgba(61, 60, 60, 0.397);
+  border-radius: 5px;
 }
 .form-search-right-moi-gioi{
   height:145px;
@@ -312,9 +332,9 @@ body {
 }
 .form-search-centre{
   height: 100%;
-  box-shadow: 3px 3px 4px rgba(0,0,0,0.2);
+  box-shadow: 5px 5px 5px rgba(61, 60, 60, 0.397);
   border-radius: 5px;
-  border:dashed 1px #e0e0e0;
+  border:dashed 1px #777474;
 }
 .form-search
 {
@@ -609,7 +629,6 @@ input[type=text], textarea, input[type=password] {
 }
 .content-box{
   margin-top: 25px;
-  border: 1px solid #E0E0E0;
   border-left: none;
   /* border-right: none; */
   padding: 10px 5px 5px 5px;
@@ -648,9 +667,6 @@ input[type=text], textarea, input[type=password] {
 }
 .content-right{
   margin-top: 25px;
-  border: 1px solid #E0E0E0;
-  border-left: none;
-
   padding: 10px 5px 5px 5px;
 }
 .namee{
@@ -670,4 +686,25 @@ input[type=text], textarea, input[type=password] {
 }
 .itemm1{
   margin-bottom:155px; 
+}
+.content-lienhe{
+  border: 1px solid #bbb9b9;
+  margin-top: 35px;
+}
+/* css mua ban nha dat,bds */
+.background-mua-ban-nha-dat{
+  background-color: #0090b5 !important;
+  color: #fff;
+  text-align: center;
+}
+/* css title product */
+.title-product{
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 5px;
+  color: #1579a8;
+  width: 678px;
+  line-height: 25px;
 }
