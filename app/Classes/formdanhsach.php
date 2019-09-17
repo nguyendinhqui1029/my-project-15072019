@@ -1,6 +1,6 @@
 <?php
     namespace App\Classes;
-    class FormDanhSach{
+    class FormDanhSach {
 
         public $classContainerFormDanhSach;
         public $classContenttieude;

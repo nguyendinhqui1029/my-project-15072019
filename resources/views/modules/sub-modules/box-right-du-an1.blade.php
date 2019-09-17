@@ -6,9 +6,10 @@
         mt-2 pt-2 background-mua-ban-nha-dat
         @endslot
         @slot('classTitle')
+        text-left
         @endslot
         @slot('contentTitle')
-        Mua bán nhà đất, bất động sản
+        NHÀ ĐẤT KHU VỰC
         @endslot
         @slot('classBoxData')
         p-2 bd-highlight

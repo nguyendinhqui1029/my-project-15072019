@@ -9,8 +9,9 @@
         {{$boxright->classTitle}}
         @endslot
         @slot('contentTitle')
-        {{$boxright->contentTitle}}
+        {{$boxright->contentTitle=' Liên kết nổi bật'}}
         @endslot
+
         @slot('classColumnBoxData')
         row
         @endslot

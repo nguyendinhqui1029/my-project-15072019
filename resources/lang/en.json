@@ -1,5 +1,6 @@
 {
     "title_home": "Home",
+    "title_project": "Project",
     "title_lien_he": "Contact - Feedback",
     "title_nha_dat_ban": "Buying and selling real estate",
     "title_nha_dep": "Nice house",
@@ -24,5 +25,6 @@
     "label_can_thue": "Need lease",
     "title_danh_sach_nmg": "List of real estate brokers nationwide",
     "title_thi_truong": "Market",
+    "label_tim_kiem_du_an": "Search for the project",
     "title_product": ""
 }
