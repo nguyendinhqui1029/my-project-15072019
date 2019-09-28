@@ -13,6 +13,7 @@ use App\Classes\ContentMaster;
 use App\Classes\FormTimKiem;
 use App\Classes\FormDanhSach;
 use Illuminate\Support\Facades\DB;
+
 class DuAnController extends Controller
 {
    public function duan(){
