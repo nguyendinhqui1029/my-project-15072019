@@ -12,17 +12,13 @@ use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
 use App\Classes\FormTimKiem;
 use Illuminate\Support\Facades\DB;
-class HomeController extends Controller
+class HomeController extends MasterController
 {
+    function __construct()
+    {
+        parent::__construct();
+    }
    public function home(){
-    //    $ds = [
-    //        new DataBoxRight("aaabbb","aaabb"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa")
-    //    ];
        
     // all component header
         $listHeaderMaster =[
@@ -71,11 +67,6 @@ class HomeController extends Controller
         }
         $listTinTuc = DB::select('select * from tintuc  where TrangThai <> ?', [2]);
         // khác là dùng <>
-        // lấy khu vực
-        $listMT = $this->getKhuVuc('MT');
-        $listMB = $this->getKhuVuc('MB');
-        $listMN= $this->getKhuVuc('MN');
-        $listMK = $this->getKhuVuc('MK');
         //var_dump($listMB); xuất dữ liệu ra trang 
        // var_dump($listNhaDatKhuVuc); xuất dữ liệu ra trang
         $var= \View::make('pages.home',["boxright" => new BoxRightMaster($listContentLienKetNoiBac),
@@ -85,17 +76,14 @@ class HomeController extends Controller
         "ds" => $listContentLienKetNoiBac,
         "listHeaderMaster"=>$listHeaderMaster,
         "listContentMaster"=>$listContentMaster,
-        "listMT"=>$listMT,
-        "listMB"=>$listMB,
-        "listMN"=>$listMB,
-        "listMK"=>$listMK,
+        "listMT"=>$this->listMT,
+        "listMB"=>$this->listMB,
+        "listMN"=>$this->listMN,
+        "listMK"=>$this->listMK,
         "listtintuc"=>$listTinTuc]);
         return $var;
     }
-    // gọi lấy khu vực trong csdl
-    function getKhuVuc($kv){
-        return $listKhuVuc = DB::select('select * from tinhthanhpho where TrangThai <> ? and KhuVuc=?', [2,$kv]);
-    }
+   
     //filter tinh thanh pho
     function filterThanhPho($listNhaDatKhuVuc, $kv){
         foreach ($listNhaDatKhuVuc as $value) {
