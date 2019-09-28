@@ -1,5 +1,6 @@
 {
     "title_home": "Trang chủ",
+    "title_project": "Dự án",
     "title_lien_he": "Liên hệ - Góp ý",
     "title_nha_dat_ban": "Mua bán nhà đất",
     "title_nha_dep": "Nhà đẹp",
@@ -24,5 +25,6 @@
     "title_xem_them": "Xem thêm...",
     "title_danh_sach_nmg": "Danh sách nhà môi giới bất động sản trên toàn quốc",
     "title_thi_truong": "Thị trường",
+    "label_tim_kiem_du_an": "Tìm kiếm dự án",
     "title_product": ""
 }

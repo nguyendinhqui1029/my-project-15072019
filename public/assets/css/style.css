@@ -338,7 +338,14 @@ body {
 }
 .form-search
 {
-  padding: 10px;
+  padding: 4px;
+  background-color: #fff;
+  font-size: 12px;
+  font-family: Arial,Verdana,sans-serif;
+  
+}
+.form-duan{
+  padding: 5px;
   background-color: #fff;
   font-size: 12px;
   font-family: Arial,Verdana,sans-serif;
@@ -547,6 +554,12 @@ input[type=text], textarea, input[type=password] {
   border: 1px solid #bbb9b9;
   border-bottom: none;
 }
+.border-duan{
+  border: 1px solid #bbb9b9;
+}
+.border-danhsach{
+  border-bottom: 1px solid #e0e0e0;
+}
 /* Phan trang */
 .container-data-phan-trang{
   border: 1px solid #333;
@@ -667,7 +680,6 @@ input[type=text], textarea, input[type=password] {
 }
 .content-right{
   margin-top: 25px;
-
   padding: 10px 5px 5px 5px;
 }
 .namee{
@@ -708,4 +720,59 @@ input[type=text], textarea, input[type=password] {
   color: #1579a8;
   width: 678px;
   line-height: 25px;
+}
+.form-search-duan{
+  height: 100%;
+  box-shadow: 5px 5px 5px rgba(61, 60, 60, 0.397);
+  border-radius: 5px;
+  border:solid 1px #0090b5;
+}
+.form-bds ul :hover{
+  background-color: #e0e0e0;;
+}
+.form-bds{
+  margin: 0 0 5px 0;
+}
+.form-bds ul  {
+  margin: 0;
+ padding: 0;
+ }
+.form-bds ul li {
+ margin: 0;
+ padding: 10px 0 10px 10px;
+ list-style: none;
+ border: 1px solid #e0e0e0;
+ border-top: 0;
+}
+.form-bds ul li a {
+  text-decoration: none;
+  font-size: 14px;
+  display: block;
+  color: #7a7a0f;
+}
+.box-below{
+  border: 1px solid #e0e0e0;
+}
+.box-below .number{
+  font-weight: bold;
+  color: red;
+}
+.box-below a {
+  color: #09C;
+  font-size: 12px;
+}
+.box-below .box1{
+  border-bottom: 1px dashed #e0e0e0;
+  padding: 0 0 3px 5px;
+  overflow: hidden;
+  line-height: 20px;
+}
+.box-lienket{
+  border: 1px solid #e0e0e0; 
+}
+.ii{
+  border-bottom: 1px solid red; 
+}
+.mau{
+  color: red;
 }

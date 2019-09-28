@@ -11,18 +11,19 @@ use App\Classes\FormSearch;
 use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
 use App\Classes\FormTimKiem;
+use App\Classes\FormDanhSach;
 use Illuminate\Support\Facades\DB;
-class HomeController extends Controller
+class DuAnController extends Controller
 {
-   public function home(){
-    //    $ds = [
-    //        new DataBoxRight("aaabbb","aaabb"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa"),
-    //        new DataBoxRight("aaa","aaa")
-    //    ];
+   public function duan(){
+       $ds = [
+           new DataBoxRight("aaabbb","aaabb"),
+           new DataBoxRight("aaa","aaa"),
+           new DataBoxRight("aaa","aaa"),
+           new DataBoxRight("aaa","aaa"),
+           new DataBoxRight("aaa","aaa"),
+           new DataBoxRight("aaa","aaa")
+       ];
        
     // all component header
         $listHeaderMaster =[
@@ -34,9 +35,9 @@ class HomeController extends Controller
     // all component header
     // all component header
     $listContentMaster =[
-        new ContentMaster(true,"mb-2",["modules.sub-modules.form-search-center","modules.sub-modules.kinh-nghiem"]),
-        new ContentMaster(true,"",["1"=>["modules.sub-modules.box-du-an-noi-bat"],
-        "2"=>["modules.sub-modules.news-right","modules.sub-modules.box-right-du-an","modules.sub-modules.box-right-du-an1"]]),
+        //new ContentMaster(true,"mb-2",["modules.sub-modules.form-search-center","modules.sub-modules.kinh-nghiem"]),
+        new ContentMaster(true,"",["1"=>["modules.sub-modules.box-du-an","modules.sub-modules.du-an-danh-sach-bds","modules.sub-modules.noi-dung-danh-sach-du-an-bds","modules.sub-modules.noi-dung-danh-sach-du-an-bds"],
+        "2"=>["modules.sub-modules.form-du-an-tim-kiem","modules.sub-modules.box-du-an-bat-dong-san","modules.sub-modules.box-du-an-bat-dong-san-below","modules.sub-modules.box-right-du-an"]]),
         new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"]),
         new ContentMaster(false,"mb-1",["modules.sub-modules.phan-trang"])
     ];
@@ -51,26 +52,17 @@ class HomeController extends Controller
         $listContentKhuVuc = [];
         array_push($listContentKhuVuc, new DataBoxRight($listNhaDatKhuVuc[0]->TenTinhThanhPho,'nha-dat-ban?id='.$listNhaDatKhuVuc[0]->ID_SanPham) );
         foreach ($listNhaDatKhuVuc as $value) {
-           if($this->filterThanhPho($listContentKhuVuc,$value)!=='')
-           {
-            array_push($listContentKhuVuc, new DataBoxRight($value->TenTinhThanhPho,'nha-dat-ban?id='.$value->ID_SanPham) );
-           }         
+            foreach ($listContentKhuVuc as $value1) {
+                if($value->TenTinhThanhPho !== $value1 ->noidung){
+                    array_push($listContentKhuVuc, new DataBoxRight($value->TenTinhThanhPho,'nha-dat-ban?id='.$value->ID_SanPham) );
+                }
+            }   
         }
-        $listBatDongSanNoiBac = DB::select('select * from sanpham where TrangThai = ?', [3]);
+        $listBatDongSanNoiBac = DB::select('select * from sanpham where Trangthai = ?', [3]);
         $listContentBatDongSan=[];
         foreach ($listBatDongSanNoiBac as $bds) {
             array_push($listContentBatDongSan,new DataCard($bds->MoTaTomTat,'#',$bds->TenSanPham,$bds->HinhAnh,$bds->TenSanPham));
         }
-
-        $listLienKetNoiBac = DB::select('select sp.TrangThai,qh.TenQuanHuyen,qh.TenQuanHuyenKhongDau from sanpham as sp
-        inner join quanhuyen as qh on sp.ID_QUANHUYEN = qh.ID_QUANHUYEN where sp.TrangThai <>?',[2]);
-        // var_dump($listLienKetNoiBac);
-        $listContentLienKetNoiBac = [];
-        foreach ($listLienKetNoiBac as $lknb) {
-            array_push($listContentLienKetNoiBac,new DataBoxRight($lknb->TenQuanHuyen,$lknb->TenQuanHuyenKhongDau,$lknb->TrangThai));
-        }
-        $listTinTuc = DB::select('select * from tintuc  where TrangThai <> ?', [2]);
-        // khác là dùng <>
         // lấy khu vực
         $listMT = $this->getKhuVuc('MT');
         $listMB = $this->getKhuVuc('MB');
@@ -78,31 +70,22 @@ class HomeController extends Controller
         $listMK = $this->getKhuVuc('MK');
         //var_dump($listMB); xuất dữ liệu ra trang 
        // var_dump($listNhaDatKhuVuc); xuất dữ liệu ra trang
-        $var= \View::make('pages.home',["boxright" => new BoxRightMaster($listContentLienKetNoiBac),
+        $var= \View::make('pages.du-an',["boxright" => new BoxRightMaster($ds),
         "boxright1" => new BoxRightMaster($listContentKhuVuc),
         "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listContentBatDongSan,
         "formSearchClass"=> new FormSearch(),
-        "ds" => $listContentLienKetNoiBac,
+        "formDanhSachClass"=>new FormDanhSach(),
+        "formTimKiemClass"=>new FormTimKiem(),
         "listHeaderMaster"=>$listHeaderMaster,
         "listContentMaster"=>$listContentMaster,
         "listMT"=>$listMT,
         "listMB"=>$listMB,
         "listMN"=>$listMB,
-        "listMK"=>$listMK,
-        "listtintuc"=>$listTinTuc]);
+        "listMK"=>$listMK]);
         return $var;
     }
     // gọi lấy khu vực trong csdl
     function getKhuVuc($kv){
-        return $listKhuVuc = DB::select('select * from tinhthanhpho where TrangThai <> ? and KhuVuc=?', [2,$kv]);
-    }
-    //filter tinh thanh pho
-    function filterThanhPho($listNhaDatKhuVuc, $kv){
-        foreach ($listNhaDatKhuVuc as $value) {
-            if($value->noidung === $kv->TenTinhThanhPho){
-                return '';
-            }
-        }
-        return $kv;
+        return $listKhuVuc = DB::select('select * from tinhthanhpho where TrangThai = ? and KhuVuc=?', [1,$kv]);
     }
 }

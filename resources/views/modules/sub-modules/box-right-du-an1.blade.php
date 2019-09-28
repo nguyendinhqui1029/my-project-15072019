@@ -6,9 +6,10 @@
         mt-2 pt-2 background-mua-ban-nha-dat
         @endslot
         @slot('classTitle')
+        text-left
         @endslot
         @slot('contentTitle')
-        Mua bán nhà đất, bất động sản
+        NHÀ ĐẤT KHU VỰC
         @endslot
         @slot('classBoxData')
         p-2 bd-highlight
@@ -17,6 +18,7 @@
         p-2 bd-highlight
         @endslot
         @slot('classColumnBoxData')
+        row
         @endslot
         
         @slot('data')
@@ -29,10 +31,10 @@
                         {{$item->noidung}} 
                     @endslot
                     @slot('classBoxData')
-                    p-2 bd-highlight
+                    col-6 col-sm-6 col-md-6 col-lg-6 col-xl-6
                     @endslot
                     @slot('classLinkData')
-                    p-2 bd-highlight
+                    p-2 bd-highlight 
                     @endslot
                 @endcomponent
             @endforeach

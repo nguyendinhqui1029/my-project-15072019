@@ -36,7 +36,7 @@ class KinhNghiemController extends Controller
      new ContentMaster(true,"mb-1",["1"=>["modules.sub-modules.content-kinh-nghiem","modules.sub-modules.noi-dung-kinh-nghiem"],
      "2"=>["modules.sub-modules.box-right-tin-tuc-noi-bat","modules.sub-modules.box-right-tin-nhieu-nguoi-doc","modules.sub-modules.box-right-thi-truong-container"
      ,"modules.sub-modules.box-right-thi-truong-container"]]),
-     new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"]),
+     //new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"]),
      new ContentMaster(false,"mb-1",["modules.sub-modules.phan-trang"])
  ];
  

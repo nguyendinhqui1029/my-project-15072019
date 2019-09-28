@@ -18,8 +18,11 @@ Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
 Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
 Route::get('/lienhe-gopy',"LienHeGopYController@lienhegopy" );
+
 Route::get('/nha-dat-ban',"NhaDatBanController@nhadatban" );
 Route::get('/nha-dat-cho-thue',"NhaDatChoThueController@nhadatchothue" );
+Route::get('/du-an',"DuAnController@duan" );
+
 
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
