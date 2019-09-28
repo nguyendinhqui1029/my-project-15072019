@@ -38,20 +38,7 @@ class HomeController extends MasterController
     ];
     // all component header
        // liên kết các bảng lại. trong database 
-       $listNhaDatKhuVuc = DB::select('select * from loaisanpham as lsp
-       inner join sanpham as sp on lsp.ID_LOAISANPHAM = sp.ID_LOAISANPHAM 
-       inner join quanhuyen as qh on sp.ID_QUANHUYEN = qh.ID_QUANHUYEN 
-       inner join tinhthanhpho as ttp on qh.ID_TINHTHANHPHO = ttp.ID_TINHTHANHPHO 
-        where lsp.TrangThai= ?', [1]);
-        // lấy giá trị ra. Nếu trùng lấy 1 cái
-        $listContentKhuVuc = [];
-        array_push($listContentKhuVuc, new DataBoxRight($listNhaDatKhuVuc[0]->TenTinhThanhPho,'nha-dat-ban?id='.$listNhaDatKhuVuc[0]->ID_SanPham) );
-        foreach ($listNhaDatKhuVuc as $value) {
-           if($this->filterThanhPho($listContentKhuVuc,$value)!=='')
-           {
-            array_push($listContentKhuVuc, new DataBoxRight($value->TenTinhThanhPho,'nha-dat-ban?id='.$value->ID_SanPham) );
-           }         
-        }
+      
         $listBatDongSanNoiBac = DB::select('select * from sanpham where TrangThai = ?', [3]);
         $listContentBatDongSan=[];
         foreach ($listBatDongSanNoiBac as $bds) {
@@ -61,19 +48,15 @@ class HomeController extends MasterController
         $listLienKetNoiBac = DB::select('select sp.TrangThai,qh.TenQuanHuyen,qh.TenQuanHuyenKhongDau from sanpham as sp
         inner join quanhuyen as qh on sp.ID_QUANHUYEN = qh.ID_QUANHUYEN where sp.TrangThai <>?',[2]);
         // var_dump($listLienKetNoiBac);
-        $listContentLienKetNoiBac = [];
-        foreach ($listLienKetNoiBac as $lknb) {
-            array_push($listContentLienKetNoiBac,new DataBoxRight($lknb->TenQuanHuyen,$lknb->TenQuanHuyenKhongDau,$lknb->TrangThai));
-        }
         $listTinTuc = DB::select('select * from tintuc  where TrangThai <> ?', [2]);
         // khác là dùng <>
-        //var_dump($listMB); xuất dữ liệu ra trang 
+        // var_dump($this->listContentLienKetNoiBac); //xuất dữ liệu ra trang 
        // var_dump($listNhaDatKhuVuc); xuất dữ liệu ra trang
-        $var= \View::make('pages.home',["boxright" => new BoxRightMaster($listContentLienKetNoiBac),
-        "boxright1" => new BoxRightMaster($listContentKhuVuc),
+        $var= \View::make('pages.home',["boxright" => new BoxRightMaster($this->listContentLienKetNoiBac),
+        "boxright1" => new BoxRightMaster($this->listContentKhuVuc),
         "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listContentBatDongSan,
         "formSearchClass"=> new FormSearch(),
-        "ds" => $listContentLienKetNoiBac,
+        "ds" => $this->listContentLienKetNoiBac,
         "listHeaderMaster"=>$listHeaderMaster,
         "listContentMaster"=>$listContentMaster,
         "listMT"=>$this->listMT,
@@ -82,15 +65,5 @@ class HomeController extends MasterController
         "listMK"=>$this->listMK,
         "listtintuc"=>$listTinTuc]);
         return $var;
-    }
-   
-    //filter tinh thanh pho
-    function filterThanhPho($listNhaDatKhuVuc, $kv){
-        foreach ($listNhaDatKhuVuc as $value) {
-            if($value->noidung === $kv->TenTinhThanhPho){
-                return '';
-            }
-        }
-        return $kv;
     }
 }

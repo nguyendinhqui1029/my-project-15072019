@@ -50,9 +50,8 @@
     @slot('tinhthanhpho')
         <div class="col-6 col-sm-6 col-md-6 col-lg-6">
             <select class=" select">
-                @foreach ($collection as $item)
                 <option value="can-ban">--{{__('label_tinh_thanh')}}--</option>   
-                @endforeach
+             
                 
             </select>
         </div>
