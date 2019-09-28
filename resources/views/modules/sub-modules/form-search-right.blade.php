@@ -33,10 +33,10 @@
     @slot('loaitin')
         <div class="col-6 col-sm-6 col-md-6 col-lg-6">
             <select class="select">
-                <option value="can-ban">{{__('label_can_ban')}}</option>
-                <option value="cho-thue">{{__('label_cho_thue')}}</option>
-                <option value="can-mua">{{__('label_can_mua')}}</option>
-                <option value="can-thue">{{__('label_can_thue')}}</option>
+                @foreach ($listLoaiSanPham as $item)
+                <option value="{{$item->ID_LoaiSanPham}}">{{__($item->TenLoaiSanPham)}}</option>   
+                @endforeach
+                
             </select>
         </div>
         <div class="col-6 col-sm-6 col-md-6 col-lg-6">
@@ -50,7 +50,10 @@
     @slot('tinhthanhpho')
         <div class="col-6 col-sm-6 col-md-6 col-lg-6">
             <select class=" select">
-                <option value="can-ban">--{{__('label_tinh_thanh')}}--</option>
+                @foreach ($collection as $item)
+                <option value="can-ban">--{{__('label_tinh_thanh')}}--</option>   
+                @endforeach
+                
             </select>
         </div>
 

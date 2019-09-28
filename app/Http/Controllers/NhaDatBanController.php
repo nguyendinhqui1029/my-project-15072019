@@ -67,14 +67,21 @@ class NhaDatBanController extends Controller
     inner join duan as da on sp.ID_DuAn = da.ID_DuAn 
     inner join motachitietsanpham as mtctsp on sp.ID_SanPham = mtctsp.ID_SanPham
     where sp.TrangThai =?',[1]);
-    // var_dump($listProduct);
+    //loaisanpham
+    $listLoaiSanPham = DB::select('select * from loaisanpham where TrangThai =?',[1]);
+    //tinhthanhpho
+    $listTinhThanhPho = DB::select('select * from tinhthanhpho where TrangThai =?',[1]);
+    //  var_dump($listLoaiSanPham);
     $var= \View::make('pages.nhadatban',["boxright" => new BoxRightMaster($ds),
     "boxright1" => new BoxRightMaster($ds2),
      "boxClass"=>new BoxDuAnNoiBat(),
      "formSearchClass"=> new FormSearch(),
      "listHeaderMaster"=>$listHeaderMaster,
      "listContentMaster"=>$listContentMaster,
-     "listProduct"=>$listProduct
+     "listProduct"=>$listProduct,
+     "listLoaiSanPham"=>$listLoaiSanPham,
+     "listTinhThanhPho"=>$listTinhThanhPho,
+
      ]);
      return $var;
     }
