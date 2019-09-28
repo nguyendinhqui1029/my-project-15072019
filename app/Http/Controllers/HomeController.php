@@ -15,14 +15,14 @@ use Illuminate\Support\Facades\DB;
 class HomeController extends Controller
 {
    public function home(){
-       $ds = [
-           new DataBoxRight("aaabbb","aaabb"),
-           new DataBoxRight("aaa","aaa"),
-           new DataBoxRight("aaa","aaa"),
-           new DataBoxRight("aaa","aaa"),
-           new DataBoxRight("aaa","aaa"),
-           new DataBoxRight("aaa","aaa")
-       ];
+    //    $ds = [
+    //        new DataBoxRight("aaabbb","aaabb"),
+    //        new DataBoxRight("aaa","aaa"),
+    //        new DataBoxRight("aaa","aaa"),
+    //        new DataBoxRight("aaa","aaa"),
+    //        new DataBoxRight("aaa","aaa"),
+    //        new DataBoxRight("aaa","aaa")
+    //    ];
        
     // all component header
         $listHeaderMaster =[
@@ -51,17 +51,26 @@ class HomeController extends Controller
         $listContentKhuVuc = [];
         array_push($listContentKhuVuc, new DataBoxRight($listNhaDatKhuVuc[0]->TenTinhThanhPho,'nha-dat-ban?id='.$listNhaDatKhuVuc[0]->ID_SanPham) );
         foreach ($listNhaDatKhuVuc as $value) {
-            foreach ($listContentKhuVuc as $value1) {
-                if($value->TenTinhThanhPho !== $value1 ->noidung){
-                    array_push($listContentKhuVuc, new DataBoxRight($value->TenTinhThanhPho,'nha-dat-ban?id='.$value->ID_SanPham) );
-                }
-            }   
+           if($this->filterThanhPho($listContentKhuVuc,$value)!=='')
+           {
+            array_push($listContentKhuVuc, new DataBoxRight($value->TenTinhThanhPho,'nha-dat-ban?id='.$value->ID_SanPham) );
+           }         
         }
-        $listBatDongSanNoiBac = DB::select('select * from sanpham where Trangthai = ?', [3]);
+        $listBatDongSanNoiBac = DB::select('select * from sanpham where TrangThai = ?', [3]);
         $listContentBatDongSan=[];
         foreach ($listBatDongSanNoiBac as $bds) {
             array_push($listContentBatDongSan,new DataCard($bds->MoTaTomTat,'#',$bds->TenSanPham,$bds->HinhAnh,$bds->TenSanPham));
         }
+
+        $listLienKetNoiBac = DB::select('select sp.TrangThai,qh.TenQuanHuyen,qh.TenQuanHuyenKhongDau from sanpham as sp
+        inner join quanhuyen as qh on sp.ID_QUANHUYEN = qh.ID_QUANHUYEN where sp.TrangThai <>?',[2]);
+        // var_dump($listLienKetNoiBac);
+        $listContentLienKetNoiBac = [];
+        foreach ($listLienKetNoiBac as $lknb) {
+            array_push($listContentLienKetNoiBac,new DataBoxRight($lknb->TenQuanHuyen,$lknb->TenQuanHuyenKhongDau,$lknb->TrangThai));
+        }
+        $listTinTuc = DB::select('select * from tintuc  where TrangThai <> ?', [2]);
+        // khác là dùng <>
         // lấy khu vực
         $listMT = $this->getKhuVuc('MT');
         $listMB = $this->getKhuVuc('MB');
@@ -69,20 +78,31 @@ class HomeController extends Controller
         $listMK = $this->getKhuVuc('MK');
         //var_dump($listMB); xuất dữ liệu ra trang 
        // var_dump($listNhaDatKhuVuc); xuất dữ liệu ra trang
-        $var= \View::make('pages.home',["boxright" => new BoxRightMaster($ds),
+        $var= \View::make('pages.home',["boxright" => new BoxRightMaster($listContentLienKetNoiBac),
         "boxright1" => new BoxRightMaster($listContentKhuVuc),
         "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listContentBatDongSan,
         "formSearchClass"=> new FormSearch(),
+        "ds" => $listContentLienKetNoiBac,
         "listHeaderMaster"=>$listHeaderMaster,
         "listContentMaster"=>$listContentMaster,
         "listMT"=>$listMT,
         "listMB"=>$listMB,
         "listMN"=>$listMB,
-        "listMK"=>$listMK]);
+        "listMK"=>$listMK,
+        "listtintuc"=>$listTinTuc]);
         return $var;
     }
     // gọi lấy khu vực trong csdl
     function getKhuVuc($kv){
-        return $listKhuVuc = DB::select('select * from tinhthanhpho where TrangThai = ? and KhuVuc=?', [1,$kv]);
+        return $listKhuVuc = DB::select('select * from tinhthanhpho where TrangThai <> ? and KhuVuc=?', [2,$kv]);
+    }
+    //filter tinh thanh pho
+    function filterThanhPho($listNhaDatKhuVuc, $kv){
+        foreach ($listNhaDatKhuVuc as $value) {
+            if($value->noidung === $kv->TenTinhThanhPho){
+                return '';
+            }
+        }
+        return $kv;
     }
 }

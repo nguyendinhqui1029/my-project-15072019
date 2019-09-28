@@ -14,7 +14,7 @@ class BoxRightMaster{
     $classBoxTitle=" p-2 bd-highlight",
     $classTitle ="",
     $contentTitle="Liên kết nổi bật",
-    $classBoxData="col-lg-6",
+    $classBoxData="col-lg-6 ",
     $classLinkData="p-2 bd-highlight"
     ){
         $this->classContainer =$classContainer;

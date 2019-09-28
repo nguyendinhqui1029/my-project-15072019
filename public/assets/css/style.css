@@ -767,3 +767,12 @@ input[type=text], textarea, input[type=password] {
   overflow: hidden;
   line-height: 20px;
 }
+.box-lienket{
+  border: 1px solid #e0e0e0; 
+}
+.ii{
+  border-bottom: 1px solid red; 
+}
+.mau{
+  color: red;
+}

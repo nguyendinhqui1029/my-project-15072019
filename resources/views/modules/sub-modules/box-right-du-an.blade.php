@@ -13,7 +13,7 @@
         @endslot
 
         @slot('classColumnBoxData')
-        row
+        row box-lienket
         @endslot
         @slot('data')
             @foreach ($boxright->data as $item )
@@ -29,7 +29,11 @@
                     {{-- p-2 bd-highlight --}}
                     @endslot
                     @slot('classLinkData')
+                    @if ($item->trangthai === 3)
+                    {{$boxright->classLinkData.' mau'}}
+                    @else
                     {{$boxright->classLinkData}}
+                    @endif
                     @endslot
                 @endcomponent
             @endforeach
