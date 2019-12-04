@@ -114,13 +114,16 @@ col-lg-12 col-12
            @slot('classContent')
            {{$boxClass->classContent=' pl-2 w-100 bd-highlight '}}
            @endslot
+        
+               
+           
            {{-- class card --}}
              @slot('imageCard')
              a
                  {{-- {{$item->image}} --}}
              @endslot
              @slot('contentCart')
-             <div>Không nói quá khi ngôi nhà này chính là tập hợp của những khối hình học không gian đa chiều khiến người ta phải ngạc nhiên sửng sốt. ...</div>
+            <div>Màu đỏ tượng trưng cho sự đam mê. Vậy tại sao không sử dụng nó để mang lại sự sôi động vào kế hoạch trang trí phòng ngủ của bạn? ...</div>
                  {{-- {{$item->content}} --}}
              @endslot
              @slot('alt')
@@ -128,13 +131,14 @@ col-lg-12 col-12
                  {{-- {{$item->alt}} --}}
              @endslot
              @slot('contentTitleCart')
-             Ngôi nhà có thiết kế mái vòm độc lạ làm sáng bừng cả khu phố
+             <div>Phòng ngủ màu đỏ dành cho người năng động</div>
                  {{-- {{$item->title}} --}}
              @endslot
              @slot('link')
         
                  {{-- {{$item->link}} --}}
              @endslot
+             
          @endcomponent 
            @endfor
        </div>

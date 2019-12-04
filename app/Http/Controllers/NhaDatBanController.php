@@ -26,7 +26,7 @@ class NhaDatBanController extends Controller
     // all component header
     // all component header
     $listContentMaster =[
-        new ContentMaster(true,"mb-2",["1"=>["modules.sub-modules.list-card-product"],
+        new ContentMaster(true,"mb-2",["1"=>["modules.sub-modules.dang-tin-nha-dat"],
         "2"=>[
             "modules.sub-modules.form-search-right",
             "modules.sub-modules.box-right-du-an1",
@@ -42,15 +42,15 @@ class NhaDatBanController extends Controller
     ];
  
        $ds = [
-        new DataBoxRight("aaabbb","aaabb"),
-        new DataBoxRight("aaa","aaa"),
-        new DataBoxRight("aaa","aaa"),
-        new DataBoxRight("aaa","aaa"),
-        new DataBoxRight("aaa","aaa"),
-        new DataBoxRight("aaa","aaa")
+        new DataBoxRight("TP. Hồ Chí Minh","aaabb"),
+        new DataBoxRight("Hà Nội","Hà Nội"),
+        new DataBoxRight("Đà Nẵng","aaa"),
+        new DataBoxRight("Bình Dương","aaa"),
+        new DataBoxRight("Đồng Nai","aaa"),
+        new DataBoxRight("Bà Rịa Vũng Tàu","aaa")
     ];
     $ds2 = [
-     new DataBoxRight("aaabbb","aaabb"),
+     new DataBoxRight("Hà Nội","aaabb"),
      new DataBoxRight("aaassss","aaassss"),
      new DataBoxRight("aaa","aaa"),
      new DataBoxRight("aaa","aaa"),
@@ -68,13 +68,15 @@ class NhaDatBanController extends Controller
     inner join motachitietsanpham as mtctsp on sp.ID_SanPham = mtctsp.ID_SanPham
     where sp.TrangThai =?',[1]);
     // var_dump($listProduct);
+    $dangtin= DB::select('select * from dangtin where TrangThai = ?', [1]);
     $var= \View::make('pages.nhadatban',["boxright" => new BoxRightMaster($ds),
     "boxright1" => new BoxRightMaster($ds2),
      "boxClass"=>new BoxDuAnNoiBat(),
      "formSearchClass"=> new FormSearch(),
      "listHeaderMaster"=>$listHeaderMaster,
      "listContentMaster"=>$listContentMaster,
-     "listProduct"=>$listProduct
+     "listProduct"=>$listProduct,
+     "dangtin"=>$dangtin
      ]);
      return $var;
     }

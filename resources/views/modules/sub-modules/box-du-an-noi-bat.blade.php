@@ -41,10 +41,9 @@
             {{__('title_xem_them')}}
             @endslot
             @slot('contentURLImage')
-               anh-noi-bat.png
+            anh-noi-bat.png
             @endslot
             @slot('content')
-           
             @endslot
         {{-- data for Title and see more --}}
         {{-- data for card --}}

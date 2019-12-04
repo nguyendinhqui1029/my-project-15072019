@@ -9,7 +9,7 @@
                                                         <div class="row align-items-start">
                                                                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
                                                                         <a href="#">
-                                                                                <img src="assets/images/logo.jpg"
+                                                                                <img src="{{asset('assets/images/logo')}}"
                                                                                         alt="BÁN GẤP NHÀ TÂN MAI"
                                                                                         title="BÁN GẤP NHÀ TÂN MAI,">
                                                                         </a>
@@ -74,7 +74,7 @@
                                                         <div class="row align-items-start">
                                                                 <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
                                                                         <a href="#">
-                                                                                <img src="assets/images/logo.jpg"
+                                                                                <img src="{{asset('assets/images/logo')}}"
                                                                                         alt="BÁN GẤP NHÀ TÂN MAI"
                                                                                         title="BÁN GẤP NHÀ TÂN MAI,">
                                                                         </a>
@@ -141,7 +141,7 @@
                                                                 <div class="row align-items-start">
                                                                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
                                                                                 <a href="#">
-                                                                                        <img src="assets/images/logo.jpg"
+                                                                                        <img src="{{asset('assets/images/logo')}}"
                                                                                                 alt="BÁN GẤP NHÀ TÂN MAI"
                                                                                                 title="BÁN GẤP NHÀ TÂN MAI,">
                                                                                 </a>
@@ -206,7 +206,7 @@
                                                                 <div class="row align-items-start">
                                                                         <div class="col-4 col-sm-4 col-md-4 col-lg-4 img-du-an">
                                                                                 <a href="#">
-                                                                                        <img src="assets/images/logo.jpg"
+                                                                                        <img src="{{asset('assets/images/logo')}}"
                                                                                                 alt="BÁN GẤP NHÀ TÂN MAI"
                                                                                                 title="BÁN GẤP NHÀ TÂN MAI,">
                                                                                 </a>

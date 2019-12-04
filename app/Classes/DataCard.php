@@ -7,11 +7,11 @@ class DataCard{
     public $image;
     public $alt;
     function __construct(
-         $content,
-         $link,
-         $title,
-         $image,
-         $alt
+            $content,
+            $link,
+            $title,
+            $image,
+            $alt
     ){
         $this->content= $content;
         $this->link= $link;

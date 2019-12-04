@@ -34,12 +34,12 @@ class NhaMoiGioiController extends Controller
      new DataBoxRight("aaa","aaa")
  ];
  // all component header
-     $listHeaderMaster =[
-         new HeaderMaster(false,"",["modules.sub-modules.top-info"]),
-         new HeaderMaster(true,"",["modules.sub-modules.logo","modules.sub-modules.video-gioi-thieu"]),
-         new HeaderMaster(false,"",["modules.sub-modules.menu-top"]),
-         new HeaderMaster(false,"",["modules.sub-modules.menu"])
-     ];
+    $listHeaderMaster =[
+        new HeaderMaster(false,"",["modules.sub-modules.top-info"]),
+        new HeaderMaster(true,"",["modules.sub-modules.logo","modules.sub-modules.video-gioi-thieu"]),
+        new HeaderMaster(false,"",["modules.sub-modules.menu-top"]),
+        new HeaderMaster(false,"",["modules.sub-modules.menu"])
+    ];
  // all component header
  // all component header
  $listContentMaster =[
@@ -95,6 +95,7 @@ inner join tinhthanhpho as ttp on qh.ID_TINHTHANHPHO = ttp.ID_TINHTHANHPHO
  $listMK = $this->getKhuVuc('MK');
  //var_dump($listMB); xuất dữ liệu ra trang 
 // var_dump($listNhaDatKhuVuc); xuất dữ liệu ra trang
+$nhamoigioi= DB::select('select * from nhamoigioi where TrangThai = ?', [1]);
  $var= \View::make('pages.home',["boxright" => new BoxRightMaster($ds),
  "boxright1" => new BoxRightMaster($listContentKhuVuc),
  "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $listContentBatDongSan,
@@ -106,7 +107,8 @@ inner join tinhthanhpho as ttp on qh.ID_TINHTHANHPHO = ttp.ID_TINHTHANHPHO
  "listMT"=>$listMT,
  "listMB"=>$listMB,
  "listMN"=>$listMB,
- "listMK"=>$listMK]);
+ "listMK"=>$listMK,
+ "nhamoigioi"=>$nhamoigioi]);
  return $var;
 }
 // gọi lấy khu vực trong csdl

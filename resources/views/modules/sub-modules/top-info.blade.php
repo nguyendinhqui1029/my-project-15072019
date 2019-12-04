@@ -1,4 +1,4 @@
-
+{{-- 
 <div class="row  fixed-top justify-content-md-center">
         <div class="col-12 col-sm-12 col-md-12 col-xl-10 col-lg-10">
             <div class="top-info">
@@ -11,11 +11,10 @@
                     <li><span class="name">Ms.Giang</span> - <span class="number">0976.804.401</span></li>
                     <li> <span class="help"><a href="/huong-dan/huong-dan">Trợ giúp - hướng dẫn</a></span></li>
                 </ul> 
-                   
                 <ul>
                     <li><span class="name">Liên hệ:</span> - <span class="number"><b>Email: contact@alonhadat.com.vn</b></span></li>
                     <li><span class="name">Thời gian làm việc:</span> - <span class="number"><b>7h30 - 12h; 14h - 17h30</b>(từ thứ Hai - thứ Bảy)</span></li>
                 </ul>  
             </div>    
         </div>
-    </div>
+    </div> --}}

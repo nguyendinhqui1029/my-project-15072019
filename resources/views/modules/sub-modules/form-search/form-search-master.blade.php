@@ -1,5 +1,6 @@
         <div class="{{$classContainerFormSearch}}">
-                <form method="POST">
+                <form method="POST" action="{{url('tim-kiem')}}">
+                        {!! csrf_field() !!}
                         <!-- dia diem -->
                         <div class="{{$classContainerDiaDiem}}">
                         {{$diadiem}}

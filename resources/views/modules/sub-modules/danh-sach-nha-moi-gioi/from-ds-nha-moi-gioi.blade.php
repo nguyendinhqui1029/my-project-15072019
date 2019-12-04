@@ -1,7 +1,7 @@
      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
      <div class="{{$classContainerFormDanhSach}}">
                     <form method="POST">
-                    <div class="{{$classContenttieude}}">{{__('title_danh_sach_nmg')}}</div>
+                            {{$tieude}}
                             <!-- dòng 1  -->
                             <div class="row">
                                 <div class="{{$classContainerHinhAnh}}">
@@ -11,14 +11,12 @@
                                             {{$cardten}}                                                     
                                             {{$cardsodienthoai}}                           
                                             {{$carddiachi}}                                                            
-                                            {{$cardxemtrang}}                                                      
-                                                                                                                                 
+                                            {{$cardxemtrang}}                                                                                                                                                                                      
                                 </div> 
                             
                             
                                 <div class=" {{$classContainerDanhGia}}">
-                                    {{$carddanhgia}}    
-                                                                     
+                                    {{$carddanhgia}}                                        
                                 </div>
                             </div>
                             <!--dòng 1, -->

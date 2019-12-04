@@ -1,11 +1,21 @@
+@foreach ($nhamoigioi as $key=>$item)
 @component('modules.sub-modules.danh-sach-nha-moi-gioi.from-ds-nha-moi-gioi')
+@if ($key ===0)
+        @slot('tieude')
+                <div class="{{$formDanhSachClass->classContenttieude}}">{{__('title_danh_sach_nmg')}}</div>
+        @endslot
+@else
+        @slot('tieude')
+                
+        @endslot
+@endif
 {{-- Add class for box --}}
 @slot('classContainerFormDanhSach')
 {{$formDanhSachClass->classContainerFormDanhSach}}
 @endslot
-@slot('classContenttieude')
-{{$formDanhSachClass->classContenttieude}}
-@endslot
+{{-- @slot('classContenttieude')
+
+@endslot --}}
 @slot('classContainerHinhAnh')
 {{$formDanhSachClass->classContainerHinhAnh}}
 @endslot
@@ -20,7 +30,7 @@
         {{-- data hình ảnh --}}
         @slot('cardhinhanh')
         <div style="width: 100%; height: 100%; padding: 5px;">
-                <img src="assets/images/logo.jpg"style="width:100%; height: 100%;"/>
+        <img src="assets/images/avatar.jpg"style="width:100%; height: 100%;"/>
             </div>
         @endslot
           {{-- data hình ảnh --}}
@@ -29,29 +39,29 @@
         @slot('cardten')
         <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                        <div class="ten"><i class="icon-user"></i> CÁT BÌNH</div>
+                        <div class="ten"><i class="icon-user"></i>{{$item->TenNhaMoiGioi}}</div>
                 </div>
             </div>
          @endslot
          @slot('cardsodienthoai')
             <div class="row">
                 <div class="col-sm">
-                 <div class="phone"><i class="icon-phone"></i><span class="phone1"> 0946.660.679</span></div>
+                <div class="phone"><i class="icon-phone"></i><span class="phone1">{{$item->SoDienThoai}}</span></div>
                 </div>
             </div>
          @endslot
          @slot('carddiachi')
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                    <div class="diachi"><img width="2.2%"  src="https://image.flaticon.com/icons/png/512/110/110462.png" />Quận 1, Hồ Chí Minh</div>
+                <div class="diachi"><img width="2.2%"  src="https://image.flaticon.com/icons/png/512/110/110462.png" />{{$item->DiaChi}}</div>
                 </div>
             </div>
         @endslot
         @slot('cardxemtrang')
             <div class="row">
                 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
-                </div ><a href="#"> Xem trang cá nhân</a> </div>
-                <div>Chuyên nhà phố trung tâm quận 1,3,5,10, phú nhuận, bình thạnh tư vấn tận tâm, tận tuỵ, nhiệt tình, hãy tìm cho mình một căn nhà ưng ý , một cơ hội đầu tư tuyệt vời</div>
+                </div ><a href="noi-dung-chi-tiet/{{$item->ID_MoiGioi}}"> Xem trang cá nhân</a> </div>
+        <div>{{$item->NoiDungTomTat}}</div>
             </div>
          @endslot
          
@@ -96,3 +106,4 @@
         {{-- data for card --}}
 {{-- Add data for box --}}
 @endcomponent
+@endforeach

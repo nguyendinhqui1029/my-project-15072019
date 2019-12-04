@@ -2,7 +2,7 @@
 <div class="row" style="margin-left: 15px;margin-top: 5px;">
     <div class="col-12 col-sm-12 col-md-12 col-lg-12">
       {{-- <b style="color: steelblue">Xem trang cá nhân</b> --}}
-    <p>{{$subContent}}<span><a href="#"><< xem chi tiết >></a></span></p>
+    <p>{{$subContent}}<span><a href=""><< xem chi tiết >></a></span></p>
     </div>
 </div>
 <div class="row" style="margin-left: 15px;margin-top: 5px;">

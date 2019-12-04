@@ -10,6 +10,7 @@ use App\Classes\DataCard;
 use App\Classes\FormSearch;
 use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
+use Illuminate\Support\Facades\DB;
 class NhaDatChoThueController extends Controller
 {
    public function nhadatchothue(){
@@ -56,13 +57,22 @@ class NhaDatChoThueController extends Controller
      new DataBoxRight("aaa","aaa")
  ];
 
-    
+ $listProduct = DB::select('select * from sanpham as sp 
+ inner join loaisanpham as lsp on sp.ID_LoaiSanPham = lsp.ID_LoaiSanPham
+ inner join vitri as vt on sp.ID_ViTri = vt.ID_ViTri 
+ inner join huong as h on sp.ID_Huong = h.ID_Huong
+ inner join quanhuyen as qh on sp.ID_QuanHuyen = qh.ID_QuanHuyen
+ inner join tinhthanhpho as ttp on qh.ID_TinhThanhPho = ttp.ID_TinhThanhPho
+ inner join duan as da on sp.ID_DuAn = da.ID_DuAn 
+ inner join motachitietsanpham as mtctsp on sp.ID_SanPham = mtctsp.ID_SanPham
+ where sp.TrangThai =?',[1]);
         $var= \View::make('pages.nhadatchothue',["boxright" => new BoxRightMaster($ds),
         "boxright1" => new BoxRightMaster($ds2),
      "boxClass"=>new BoxDuAnNoiBat(),
      "formSearchClass"=> new FormSearch(),
      "listHeaderMaster"=>$listHeaderMaster,
      "listContentMaster"=>$listContentMaster,
+     "listProduct"=>$listProduct
      ]);
      return $var;
     }

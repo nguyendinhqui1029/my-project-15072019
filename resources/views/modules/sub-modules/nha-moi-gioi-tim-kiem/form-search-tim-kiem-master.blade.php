@@ -1,7 +1,8 @@
 <div class="col-12 col-sm-12 col-md-12 col-lg-12">
         
     <div class="{{$classContainerFormTimKiem}}">
-            <form method="POST">
+            <form method="POST" action="{{url ('nha-dat-ban')}}">
+                    {!! csrf_field() !!}
                         <div class="tittel">Tìm kiếm</div>
                     <!-- dòng 1  -->
                     <div class="{{$classContainerLoaiBDS}}">
@@ -18,8 +19,8 @@
                     {{$quanhuyen}}
                     </div>
                     <!-- dòng 3 -->   
-                     <!--dòng 4-->
-                     <div class="{{$classContainerButtonTimKiem}}">
+                    <!--dòng 4-->
+                    <div class="{{$classContainerButtonTimKiem}}">
                         {{$buttontimkiem}}
                 </div>
                 <!--dòng 4, nút-->
