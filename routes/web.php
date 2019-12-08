@@ -66,6 +66,11 @@ Route::post('/tim-kiem',"TimKiemController@getTimKiem");
 // admin người dùng
 Route::get('/admin-nguoi-dung',"AdminController@adminNguoiDung" );
 Route::get('/delete-nguoi-dung',"AdminController@deleteNguoiDung" );
+// Khuyễn mãi
+Route::get('/add-khuyen-mai',"AdminController@adminKhuyenMai" );
+Route::post('/add-khuyen-mai',"AdminController@addKhuyenMai" );
+Route::get('/admin-khuyen-mai',"AdminController@getkhuyenmai");
+Route::get('/delete-khuyen-mai',"AdminController@deleteKhuyenMai" );
 /*tài khoản */
 Route::get('/add-tai-khoan',"AdminController@adminContent" );
 Route::post('/add-tai-khoan',"AdminController@addTaiKhoan" );

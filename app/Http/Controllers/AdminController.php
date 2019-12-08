@@ -638,6 +638,60 @@ class AdminController extends MasterController
         "lienhe"=>$lienhe]);
             return $var;
     }
+    // Khuyễn mãi
+    public function deleteKhuyenMai(Request $request){
+        $id= $request->id;
+            if(isset($id))
+            {
+            $data= DB::delete("delete from khuyenmai where ID_KhuyenMai = ?", [$id]);
+            }
+        $khuyenmai= DB::select('select * from khuyenmai where TrangThai = ?', [1]);
+        $var = \View::make ('modules.sub-modules.admin',[
+            "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-khuyen-mai",
+            "chucnang"=>$request->chucnang,
+            "khuyenmai"=>$khuyenmai]);
+        return $var;
+    }
+    public function adminKhuyenMai(Request $request){
+        $id= $request->id;
+        if(isset($id))
+        {
+            $data = DB::select('select * from khuyenmai where ID_KhuyenMai = ?', [$id]);
+        }
+        $var = \View::make('modules.sub-modules.admin',[
+            "linkAdmin"=>"modules.sub-modules.content.content-admin.content-khuyen-mai",
+            "data"=>isset($data)?$data[0]:'',
+            "chucnang"=>$request->chucnang]);
+            return $var;
+    }
+    public function addKhuyenMai(Request $request){
+        switch ($request->chucnang) {
+            case 'update':
+                {
+                    DB::update('update khuyenmai set TieuDe1=?, HinhAnh1=?, TieuDe2=?, HinhA2=?,TieuDe3=?, HinhAnh3=?, TieuDe4=?, HinhAnh4=?, TieuDe5=?, TrangThai=? where ID_KhuyenMai = ?',
+                    [$request->txttieude1,$request->txthinhanh1,$request->txttieude2, $request->txthinhanh2,$request->txttieude3,$request->txthinhanh3,$request->txttieude4, $request->txthinhanh4, $request->txttieude5,$request->txttrangthai,$request->id]);
+                }
+                break;
+            case 'them':
+                {
+                    DB::insert('insert into khuyenmai  values (?,?,?,?,?,?,?,?,?,?,?)',
+                    [null,$request->txttieude1,$request->txthinhanh1,$request->txttieude2, $request->txthinhanh2,$request->txttieude3,$request->txthinhanh3,$request->txttieude4, $request->txthinhanh4, $request->txttieude5,$request->txttrangthai]);
+                }
+                break;
+        }
+        $var= \View::make('modules.sub-modules.admin',[
+            "linkAdmin"=>"modules.sub-modules.content.content-admin.content-khuyen-mai",
+            "chucnang"=>$request->chucnang]);
+            return $var;
+    }
+    public function getkhuyenmai (Request $request){
+        $khuyenmai= DB::select('select * from khuyenmai where TrangThai = ?', [1]);
+        $var = \View::make('modules.sub-modules.admin',[ 
+            "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-khuyen-mai",
+            "chucnang"=>$request->chucnang,
+            "khuyenmai"=>$khuyenmai]);
+            return $var;
+    }
     // Quản lý người đăng tin 
     // public function dangtinlen (Request $request)
     // {

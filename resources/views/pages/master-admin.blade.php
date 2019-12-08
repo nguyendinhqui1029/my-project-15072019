@@ -141,6 +141,15 @@
                             <li class="active"> <a href="{{ url('admin-mau-nha-dep?chucnang=them') }}">Thêm mẫu nhà đẹp</a></li>
                             <li class="active"> <a href="{{ url('load-mau-nha-dep') }}">D/s mẫu nhà đẹp</a></li>
                         </ul>
+                        <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#khuyenmai"
+                            aria-expanded="false" href="#">
+                            <i class="vl_dashboard"></i>
+                            <span class="nav-link-text">Khuyến mãi</span>
+                        </a>
+                        <ul class="sidenav-second-level collapse" id="khuyenmai" data-parent="#accordion" style="">
+                            <li class="active"> <a href="{{ url('add-khuyen-mai?chucnang=them') }}">Thêm khuyến mãi</a></li>
+                            <li class="active"> <a href="{{ url('admin-khuyen-mai') }}">D/s khuyến mãi</a></li>
+                        </ul>
                         <div>
                             <a class="nav-link nav-link-collapse collapsed" href="{{ url('dang-tin') }}">
                                 <span class="nav-link-text">Quản lý người đăng tin</span>

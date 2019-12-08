@@ -26,33 +26,46 @@ class KhuyenMaiController extends MasterController
             new HeaderMaster(false,"",["modules.sub-modules.menu"])
         ];
     $this->listContentMaster =[
-        new ContentMaster(false,"mb-1",["modules.sub-modules.khuyen-mai"])
+        new ContentMaster(false,"mb-1",["modules.sub-modules.box-khuyen-mai"])
     ];
     }
     // KIỂM TRA URL
-    public function checkDangNhap(Request $request)
-    {
-        $isLogin =false;
-        if($request->session()->has('role') && $request->session()->has('tendangnhap') && $request->session()->has('madangnhap'))
-        {
-            $isLogin = true;
-        }
-        return $isLogin;
+    // public function checkDangNhap(Request $request)
+    // {
+    //     $isLogin =false;
+    //     if($request->session()->has('role') && $request->session()->has('tendangnhap') && $request->session()->has('madangnhap'))
+    //     {
+    //         $isLogin = true;
+    //     }
+    //     return $isLogin;
 
-    }
+    // }
     public function khuyenmai( Request $request){
-        $khuyenmai= DB::select('select * from khuyenmai where active = ?', [1]);
-        if($this->checkDangNhap($request))
-        {
-            $var= \View::make('pages.khuyen-mai',["listHeaderMaster"=>$this->listHeaderMaster,
-        "listContentMaster"=>$this->listContentMaster,
-        ]);
-        return $var;
-        }else{
-            $var= \View::make('pages.dang-nhap-nguoi-dung',[
-                "listHeaderMaster"=>$this->listHeaderMaster,
-                "listContentMaster"=>$this->listContentMaster]);
-                return $var; 
+        //$khuyenmai= DB::select('select * from khuyenmai where TrangThai = ?', [1]);
+        $listData= DB::select('select * from khuyenmai where TrangThai = ?', [1]);
+        $khuyenmai=[];
+            foreach ($listData as $bds) {
+                array_push($khuyenmai,new DataCard($bds->TieuDe2,'#',$bds->TieuDe1,$bds->HinhAnh1,'#'));
             }
+        // if($this->checkDangNhap($request))
+        // {
+        //     $var= \View::make('pages.khuyen-mai',["listHeaderMaster"=>$this->listHeaderMaster,
+        // "listContentMaster"=>$this->listContentMaster,
+        // "listData"=>$khuyenmai
+        // ]);
+        // return $var;
+        // }else{
+        //     $var= \View::make('pages.dang-nhap-nguoi-dung',[
+        //         "listHeaderMaster"=>$this->listHeaderMaster,
+        //         "listContentMaster"=>$this->listContentMaster]);
+        //         return $var; 
+        //     }
+        $var= \View::make('pages.khuyen-mai',[
+            
+            "listHeaderMaster"=>$this->listHeaderMaster,
+            "listContentMaster"=>$this->listContentMaster,
+            "listData"=>$khuyenmai
+            ]);
+            return $var;
     }
 }

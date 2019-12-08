@@ -1,4 +1,4 @@
-@extends('pages.master')k
+@extends('pages.master')
 
 @section('title',__('title_khuyen_mai'))
 
