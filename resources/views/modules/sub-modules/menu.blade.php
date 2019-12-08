@@ -122,4 +122,21 @@
               <div class="dropdown1">
                       <a href="{{ url('lienhe-gopy') }}" class="dropbtn">LIÊN HỆ - GÓP Ý</a>
               </div>
+
+              {{-- xét menu trang người dùng --}}
+              @if(Session::has('tendangnhap'))
+                @if (Session::get('role')== 1)
+                <div class="dropdown1">
+                <a href="{{url('noi-dung-nguoi-dung')}}" class="dropbtn">NỘI DUNG</a>
+                </div>
+                <div class="dropdown1">
+                    <a href="{{url('khuyen-mai')}}" class="dropbtn">KHUYẾN MÃI</a>
+                    </div>
+                <h6 style="color: white;margin-top: 10px;margin-left: 20px">Chào bạn:{{Session::get('tendangnhap')}}</h6>
+                @endif
+                  
+              @endif
+              
+              
+            
       </div>

@@ -130,7 +130,7 @@ col-lg-12 col-12
             {{$boxClass->classContent=' pl-2 w-100 bd-highlight '}}
             @endslot
             {{-- class card --}}
-            @foreach ($kinhnghiem as $item)
+            @foreach ($listData as $item)
                 @slot('imageCard')
                 a
                     {{-- {{$item->image}} --}}

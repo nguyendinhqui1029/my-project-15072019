@@ -41,6 +41,7 @@ class KhuyenMaiController extends MasterController
 
     }
     public function khuyenmai( Request $request){
+        $khuyenmai= DB::select('select * from khuyenmai where active = ?', [1]);
         if($this->checkDangNhap($request))
         {
             $var= \View::make('pages.khuyen-mai',["listHeaderMaster"=>$this->listHeaderMaster,

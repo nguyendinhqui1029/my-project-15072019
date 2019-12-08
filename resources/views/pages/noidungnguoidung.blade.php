@@ -1,14 +1,13 @@
 @extends('pages.master')
 
-@section('title',__('title_home'))
+@section('title',__('title_noi_dung_chi_tiet'))
 
 @section('header-master')
   @include('modules.sub-modules.header-master')
 @endsection
 
 @section('content-master')
-{{-- @include('modules.sub-modules.nha-moi-gioi-search') --}}
-@include('modules.sub-modules.content-master')
+ @include('modules.sub-modules.content-master')
 @endsection
 
 @section('quang-cao-trai')
@@ -22,3 +21,4 @@
 @section('footer')
   @include('modules.sub-modules.footer')
 @endsection
+{{-- // nhà môi giới --}}

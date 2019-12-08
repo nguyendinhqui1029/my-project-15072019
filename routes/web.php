@@ -17,6 +17,7 @@ Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
 
 Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
+Route::get('/noi-dung-nguoi-dung',"NoiDungNguoiDungController@noidungnguoidung" );
 // liên hệ
 Route::get('/lienhe-gopy',"LienHeGopYController@lienhegopy" );
 Route::post('/lienhe-gopy',"LienHeGopYController@sendlienhegopy" );

@@ -4,7 +4,7 @@
                 <div class="row no-gutters">
                         <div class="col-md-4" style="height: 150x;">
                                 <a href="#">
-                                <img style="width: 100%; height: 100%;" src="assets/images/paypal_express.png">
+                                <img style="width: 100%; height: 100%;" src="assets/images/anhhome.jpg">
                                 </a>
                         </div>
                         <div class="col-md-8">

@@ -1,6 +1,6 @@
 @extends('pages.master')
 
-@section('title',__('title_home'))
+@section('title',__('title_nha_moi_gioi'))
 
 @section('header-master')
   @include('modules.sub-modules.header-master')

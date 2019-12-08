@@ -52,12 +52,12 @@
                   <div class="col-8" style="margin-bottom: 10px; "><input style="border: currentColor 1px solid" type="text" value="" /></div>
               </div> --}}
               <div class="form-check" style="margin-left:160px;margin-bottom: 10px; ">
-                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                <label class="form-check-label" for="exampleCheck1" style="color: dodgerblue">Tôi không có email</label>
+                {{-- <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                <label class="form-check-label" for="exampleCheck1" style="color: dodgerblue">Tôi không có email</label> --}}
               </div>
               <div class="row">
-              <div class="col-4">Tỉnh Thành/Phố (<span style="color: crimson">*</span>)</div>
-              <div class="col-8" style="margin-bottom: 10px; ">
+              {{-- <div class="col-4">Tỉnh Thành/Phố (<span style="color: crimson">*</span>)</div> --}}
+              {{-- <div class="col-8" style="margin-bottom: 10px; ">
                   <select class="select" style="border: currentColor 1px solid; width: 50%;height: 20px;border: 1px solid black;
                   border-radius: 2px;">
                       <option value="can-ban">-- Chọn tỉnh/thành phố ----</option>
@@ -65,10 +65,10 @@
                       <option value="can-mua">Cần mua</option>
                       <option value="can-thue">Cần thuê</option>
                   </select>
-              </div>
+              </div> --}}
               </div>
               <div class="row">
-                  <div class="col-4">Quận/ huyện (<span style="color: crimson">*</span>)</div>
+                  {{-- <div class="col-4">Quận/ huyện (<span style="color: crimson">*</span>)</div>
                   <div class="col-8">
                       <select class="select" style="border: currentColor 1px solid; width: 50%;height: 20px;border: 1px solid black;
                       border-radius: 2px;">
@@ -77,7 +77,7 @@
                           <option value="can-mua">Cần mua</option>
                           <option value="can-thue">Cần thuê</option>
                       </select>
-                  </div>
+                  </div> --}}
               </div>
               {{-- <div class="row" style="margin-top: 10px;">
                   <div class="col-4">Loại tài khoản (<span style="color: crimson">*</span>)</div>

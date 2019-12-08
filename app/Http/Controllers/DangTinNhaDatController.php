@@ -12,6 +12,7 @@ use App\Classes\HeaderMaster;
 use App\Classes\ContentMaster;
 use App\Classes\FormTimKiem;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
 class DangTinNhaDatController extends MasterController
 {
     private $listContentMaster;
@@ -44,8 +45,8 @@ class DangTinNhaDatController extends MasterController
         return $var;
     }
     public function postdangtinnhadat (Request $request){
-        $dangtinnhadat= DB::insert('insert into dangtin values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-        [null,$request->txttieude,$request->txtnoidung,$request->txtloaitin,$request->txtdiachi,$request->txtgiaban,$request->txtdientich,$request->txttenlienhe,$request->txtdienthoai,$request->txtchieurong,$request->txtchieudai,$request->txtsolau,$request->txtsophongngu,$request->txthinhanh,$request->txtngay,$request->txttong,1,"2019-08-28 00:00:00","2019-08-28 00:00:00"]);
+        $dangtinnhadat= DB::insert('insert into dangtin values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+        [null,Session::get('madangnhap'),$request->txttieude,$request->txtnoidung,$request->txtloaitin,$request->txtdiachi,$request->txtgiaban,$request->txtdientich,$request->txttenlienhe,$request->txtdienthoai,$request->txtchieurong,$request->txtchieudai,$request->txtsolau,$request->txtsophongngu,$request->txthinhanh,$request->txtngay,$request->txttong,1,"2019-08-28 00:00:00","2019-08-28 00:00:00"]);
         $var= \View::make('pages.dang-tin-nha-dat',[
         "listHeaderMaster"=>$this->listHeaderMaster,
         "listContentMaster"=>$this->listContentMaster,
