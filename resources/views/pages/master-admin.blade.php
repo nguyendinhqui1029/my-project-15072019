@@ -164,7 +164,13 @@
                                 <a class="nav-link nav-link-collapse collapsed" href="{{ url('lien-he-gop-y') }}">
                                     <span class="nav-link-text">Quản lý liên hệ</span>
                                 </a>
-                            </div>
+                        </div>
+                        <div>
+                            <a class="nav-link nav-link-collapse collapsed" href="{{ url('load-tien-dang-tin-ngay') }}">
+                                <span class="nav-link-text">Quản lý tiền đăng tin trong ngày</span>
+                            </a>
+                            <li> <a href="{{ url('ngay-tien-dang-tin-ngay') }}">Theo ngày</a></li>
+                        </div>
                         <div>
                         {{-- Quản lý doanh nghiệp --}}
                         <a class="nav-link nav-link-collapse collapsed" data-toggle="collapse" data-target="#doanhsodanhnghiep"

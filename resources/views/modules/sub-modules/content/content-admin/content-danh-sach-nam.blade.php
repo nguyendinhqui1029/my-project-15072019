@@ -25,6 +25,5 @@
     <div class="sum" style="text-align: center;margin-left: 500px">
             <form action="{{url('nam-thong-ke')}}" method="post">
                     {{ csrf_field() }}
-                    <input type="date" class="p-1" name="ngay"/> <button type="submit" class="p-1" >Tìm kiếm</button>
-            </form>
+                    <input type="hidden" class="p-1" name="ngay"/> 
     </div>

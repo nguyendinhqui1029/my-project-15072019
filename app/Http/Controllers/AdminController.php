@@ -718,32 +718,49 @@ class AdminController extends MasterController
         "dangtin"=>$dangtin]);
         return $var;
     }
+    // quản lý tiền đăng tin trong ngày getDangTinNgay deleteDangTinNgay
+    public function ngayDangTinNgay(Request $request){
+        //lấy các sản phẩm bán trong 1 ngày
+        foreach(DB::select("select distinct(NgayDangTin)as ngay from dangtin") as $ngay)
+        {
+            $tiendangtin[$ngay->ngay]= DB::select ("select ID_DangTin, NgayDangTin, DienTich, sum(Tong) as Tong  from dangtin where NgayDangTin =?",[$ngay->ngay])[0];
+        }
+        $var = \View::make('modules.sub-modules.admin',[ 
+        "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-tien-dang-tin",
+        "chucnang"=>$request->chucnang,
+        "tiendangtin"=>$tiendangtin]);
+        return $var;
+    }
+    public function postDangTinNgay(Request $request){
+        $tiendangtin= DB::select("select * from dangtin where NgayDangTin =?",[$request->ngay]);
+        $var = \View::make('modules.sub-modules.admin',[ 
+        "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-tien-dang-tin",
+        "chucnang"=>$request->chucnang,
+        "tiendangtin"=>$tiendangtin]);
+        return $var;
+    }
+    public function deleteDangTinNgay (Request $request){
+        $id = $request->id;
+        if(isset($id)){
+            $data= DB::delete("delete from dangtin where ID_DangTin= ?", [$id]);
+        }
+        
+        $tiendangtin =DB::select('select * from dangtin where TrangThai = ?', [1]);
+        $var = \View::make('modules.sub-modules.admin',[ 
+        "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-tien-dang-tin",
+        "chucnang"=>$request->chucnang,
+        "tiendangtin"=>$tiendangtin]);
+        return $var;
+    }
+    public function getDangTinNgay (Request $request){
+        $tiendangtin = DB::select('select * from dangtin where TrangThai = ?', [1]);
+        $var = \View::make('modules.sub-modules.admin',[
+        "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-tien-dang-tin",
+        "request"=>$request,
+        "tiendangtin"=>$tiendangtin]);
+        return $var;
+    }
     // thống kê doanh nghiệp
-    /////////////////////////////
-    // public function ThongKeDoanhNghiep(Request $request){
-    //     $arrTam=[];
-    //     foreach(DB::select("select  distinct(NgayBan) as ngay,  MONTH(NgayBan) as thang  from danhsachdoanhnghiep ") as $thang)
-    //     {
-    //         if(!in_array($thang->thang,$arrTam))
-    //         {
-    //             array_push($arrTam,$thang->thang);
-    //             $doanhnghiep[$thang->ngay] = DB::select("select  ID_DoanhNghiep,TenDoanhNghiep, SoDienThoai, sum(TongGia) as TongGia, MONTH(NgayBan) as NgayBan, TrangThai from danhsachdoanhnghiep where MONTH(NgayBan) = MONTH(?)", [$thang->ngay])[0];
-    //         }
-    //     }
-    //     $var = \View::make('modules.sub-modules.admin',[ 
-    //     "linkAdmin"=>"modules.sub-modules.content.content-admin.content-danh-sach-doanh-nghiep-thang",
-    //     "chucnang"=>$request->chucnang,
-    //     "doanhnghiep"=>$doanhnghiep]);
-    //     return $var;
-    // }
-    // public function postThongKeDoanhNghiep(Request $request){
-    //     $doanhnghiep= DB::select("select * from danhsachdoanhnghiep where NgayBan =?",[$request->ngay]);
-    //     $var = \View::make('modules.sub-modules.admin',[ 
-    //     "linkAdmin"=>"modules.sub-modules.content.content-admin.content-danh-sach-doanh-nghiep-thang",
-    //     "chucnang"=>$request->chucnang,
-    //     "doanhnghiep"=>$doanhnghiep]);
-    //     return $var;
-    // }
     public function ThongKeDoanhNghiep(Request $request){
         //lấy các sản phẩm bán trong 1 ngày
         foreach(DB::select("select distinct(TenDoanhNghiep)as name from danhsachdoanhnghiep") as $name)

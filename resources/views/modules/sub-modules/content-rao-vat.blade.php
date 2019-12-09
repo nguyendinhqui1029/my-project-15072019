@@ -43,11 +43,18 @@
             height: 30px;
             padding: 0 0 0 5px;
             margin: 0 0 5px 0;">Thông tin bắt buộc</h5>
+            {{-- <div class="col-4 col-sm-2 col-md-4 col-lg-4" style="margin-left: 5px;">
+              Ngày đăng: <input name="txtdate" style="height:25px;" class="w-50 m-2 ml-5" type="date" />
+            </div> --}}
       <div class="row">
         <!-- {{-- tiêu đề --}} -->
         <div class="col-1">Tiêu đề <span style="color: red">*</span></div>
-        <div class="col-11">
+        <div class="col-5">
           <div class="ml-2 mr-2 "><input name="txttieude" class="w-100" type="text"  required/></div>
+        </div>
+        <div class="col-1">Ngày đăng tin <span style="color: red">*</span></div>
+        <div class="col-5">
+          <div class="ml-2 mr-2 " style="border: 1px solid wheat; border-radius: 4px"><input name="txtdate" class="w-100" type="date"  required/></div>
         </div>
       </div>
       <div class="row">
@@ -145,15 +152,16 @@
           <!-- Giá -->
           <div class="col-1 col-sm-2 col-md-3 col-lg-2">
                 <label class="label-form-search m-2">Giá bán <span style="color:red">*</span></label>
-           </div>
-           <div class="col-4 col-sm-2 col-md-5 col-lg-4">
-           <input name="txtgiaban" style="height:25px;" class="w-100 m-2" type="text" />
+          </div>
+          <div class="col-4 col-sm-2 col-md-5 col-lg-4">
+          <input name="txtgiaban" style="height:25px;" class="w-100 m-2" type="text" />
           </div>
           <div class="col-1 m-3">Diện tích</div>
           <div class="col-4 col-sm-2 col-md-4 col-lg-4">
             <input name="txtdientich" style="height:25px;" class="w-50 m-2" type="text" />m2
           </div>
         </div>
+          
           <p style="color:#777;margin-left:5px;"> Chú ý: 1 m2 = 1.000 VNĐ</p>
           <p style="color: #1029AC;font-style: italic;margin-left:5px;">Các tin đăng thiếu chính xác, <span style="font-weight: bold;">sai địa chỉ, sai mức giá</span> (giá thấp hơn giá thực tế), <span style="font-weight: bold;">chọn sai dự án</span> sẽ bị  <span style="font-weight: bold;color:red">khóa tài khoản vĩnh viễn</span>
           </p>
@@ -161,7 +169,7 @@
         <div class="row">
           <div class="col-3 col-sm-2 col-md-3 col-lg-2">
                 <label class="label-form-search m-2">Tên liên hệ <span style="color:red">*</span></label>
-           </div>
+          </div>
           <div class="col-9 col-sm-4 col-md-9 col-lg-4">
           <input name="txttenlienhe" style="height:25px;" class="w-60 m-2" type="text" />
           </div>

@@ -66,7 +66,7 @@ Route::post('/tim-kiem',"TimKiemController@getTimKiem");
 // admin người dùng
 Route::get('/admin-nguoi-dung',"AdminController@adminNguoiDung" );
 Route::get('/delete-nguoi-dung',"AdminController@deleteNguoiDung" );
-// Khuyễn mãi
+// Khuyến mãi
 Route::get('/add-khuyen-mai',"AdminController@adminKhuyenMai" );
 Route::post('/add-khuyen-mai',"AdminController@addKhuyenMai" );
 Route::get('/admin-khuyen-mai',"AdminController@getkhuyenmai");
@@ -76,6 +76,12 @@ Route::get('/add-tai-khoan',"AdminController@adminContent" );
 Route::post('/add-tai-khoan',"AdminController@addTaiKhoan" );
 Route::get('/load-danh-sach',"AdminController@getDanhSach" );
 Route::get('/delete-danh-sach',"AdminController@deleteDanhSach" );
+// Quản lý giá tiền đăng tin trong ngày.
+
+Route::get('/load-tien-dang-tin-ngay',"AdminController@getDangTinNgay" );
+Route::get('/delete-tien-dang-tin-ngay',"AdminController@deleteDangTinNgay" );
+Route::get('/ngay-tien-dang-tin-ngay',"AdminController@ngayDangTinNgay");
+Route::post('/ngay-tien-dang-tin-ngay',"AdminController@postDangTinNgay");
 
 // du án
 Route::get('/admin-du-an',"AdminController@adminDuAn" );

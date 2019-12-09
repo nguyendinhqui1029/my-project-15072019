@@ -31,10 +31,10 @@ class DangTinNhaDatController extends MasterController
             new ContentMaster(false,"mb-1",["modules.sub-modules.content-rao-vat"])
         ];
     }
-   public function getdangtinnhadat(Request $request){
+    public function getdangtinnhadat(Request $request){
 
-         $dientich = $request->input('txtdientich');
-         $ngay = $request->input('txtngay');
+        $dientich = $request->input('txtdientich');
+        $ngay = $request->input('txtngay');
         $tong= $dientich + $ngay;
         $var= \View::make('pages.dang-tin-nha-dat',[ 
         "listHeaderMaster"=>$this->listHeaderMaster,
@@ -45,8 +45,8 @@ class DangTinNhaDatController extends MasterController
         return $var;
     }
     public function postdangtinnhadat (Request $request){
-        $dangtinnhadat= DB::insert('insert into dangtin values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
-        [null,Session::get('madangnhap'),$request->txttieude,$request->txtnoidung,$request->txtloaitin,$request->txtdiachi,$request->txtgiaban,$request->txtdientich,$request->txttenlienhe,$request->txtdienthoai,$request->txtchieurong,$request->txtchieudai,$request->txtsolau,$request->txtsophongngu,$request->txthinhanh,$request->txtngay,$request->txttong,1,"2019-08-28 00:00:00","2019-08-28 00:00:00"]);
+        $dangtinnhadat= DB::insert('insert into dangtin values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)',
+        [null,Session::get('madangnhap'),$request->txttieude,$request->txtdate,$request->txtnoidung,$request->txtloaitin,$request->txtdiachi,$request->txtgiaban,$request->txtdientich,$request->txttenlienhe,$request->txtdienthoai,$request->txtchieurong,$request->txtchieudai,$request->txtsolau,$request->txtsophongngu,$request->txthinhanh,$request->txtngay,$request->txttong,1,"2019-08-28 00:00:00","2019-08-28 00:00:00"]);
         $var= \View::make('pages.dang-tin-nha-dat',[
         "listHeaderMaster"=>$this->listHeaderMaster,
         "listContentMaster"=>$this->listContentMaster,
