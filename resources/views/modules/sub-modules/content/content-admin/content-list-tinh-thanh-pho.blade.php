@@ -26,5 +26,6 @@
             </td>
         </tr>
         @endforeach
+        <p style="font-weight: bold;margin-top: 10px;margin-left: 10px">Tổng số hàng :  {{ count($tinhthanhpho)}}</p>
     </tbody>
 </table>

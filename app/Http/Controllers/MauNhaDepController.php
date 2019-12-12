@@ -19,7 +19,7 @@ class MauNhaDepController extends MasterController
     private $listContentMaster;
     private $listHeaderMaster;
     private $ds2;
-    private $listData;
+    // private $listData;
     function __construct()
     {
         parent::__construct();
@@ -34,7 +34,7 @@ class MauNhaDepController extends MasterController
             //new ContentMaster(true,"mb-1",["1"=>["modules.sub-modules.content-mau-nha-dep","modules.sub-modules.noi-dung-mau-nha-dep"],
             //"2"=>["modules.sub-modules.box-right-tin-nhieu-nguoi-doc","modules.sub-modules.box-right-kien-truc"]]),
            // new ContentMaster(false,"mb-1",["modules.sub-modules.nha-dat-khu-vuc"]),
-           new ContentMaster(true,"mb-1",["1"=>["modules.sub-modules.content-mau-nha-dep","modules.sub-modules.content-list-mau-nha-dep"],
+           new ContentMaster(true,"mb-1",["1"=>["modules.sub-modules.content-mau-nha-dep","modules.sub-modules.box-mau-nha-dep"],
                "2"=>["modules.sub-modules.box-right-tin-nhieu-nguoi-doc","modules.sub-modules.box-nha-dep-right2"]]),
            new ContentMaster(false,"mb-1",["modules.sub-modules.phan-trang"])
         ];
@@ -43,38 +43,48 @@ class MauNhaDepController extends MasterController
             new DataBoxRight(" Hướng dẫn đăng tin nhà đất hiệu quả ","aaassss"),
             new DataBoxRight(" KINH NGHIỆM BÁN: Làm sao để tăng giá trị khi bán nhà?","aaa"),
         ];
-        $this->listData =[
-            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ... This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#","Cool Fancy Text Generator - Cool Fonts & Stylish Letters, Symbols ","anh-noi-bat.png","alt"),
-            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#","Cool Fancy Text Generator, Symbols","anh-noi-bat.png","alt"),
-            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt"),
-            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt"),
-            new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt")
-        ];
+        // $this->listData =[
+        //     new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ... This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#","Cool Fancy Text Generator - Cool Fonts & Stylish Letters, Symbols ","anh-noi-bat.png","alt"),
+        //     new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#","Cool Fancy Text Generator, Symbols","anh-noi-bat.png","alt"),
+        //     new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt"),
+        //     new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt"),
+        //     new DataCard("This is a generator for text fonts of the cool variety. I noticed people were trying to find a generator like fancy letters, but were ending up on actual font sites ...","#"," Cool Fonts & Stylish Letters, Symbols","anh-noi-bat.png","alt")
+        // ];
     }
+
     public function MauNhaDep(){
 
-    $maunhadep=DB::select('select * from maunhadep where TrangThai = ?', [1]);
+    // $maunhadep=DB::select('select * from maunhadep where TrangThai = ?', [1]);
+    $listData= DB::select('select * from maunhadep where TrangThai = ?', [1]);
+    $listDataMauNhaDep=[];
+        foreach ($listData as $bds) {
+            array_push($listDataMauNhaDep,new DataCard($bds->TieuDe,$bds->ID_MauNhaDep,$bds->NoiDungTomTat,$bds->HinhAnh,$bds->NoiDungChiTiet));
+        }
      $var= \View::make('pages.maunhadep',[
      "boxright1" => new BoxRightMaster($this->ds2),
-     "boxClass"=>new BoxDuAnNoiBat(),"listData"=> $this->listData,
+     "boxClass"=>new BoxDuAnNoiBat(),
+    //  "listData"=> $this->listData,
      "formSearchClass"=> new FormSearch(),
      "listHeaderMaster"=>$this->listHeaderMaster,
      "listContentMaster"=>$this->listContentMaster,
      "formTimKiemClass"=>new FormTimKiem(),
      "formDanhSachClass"=>new FormDanhSach(),
-     "maunhadep"=>$maunhadep]);
+     "listData"=>$listDataMauNhaDep]);
      return $var;
  }
- public function getMauNhaDep (Request $request)
+ public function getMauNhaDep (Request $request)    
     {
+       
         $var= \View::make('pages.chi-tiet-bai-dang',[
             "boxright1" => new BoxRightMaster($this->ds2),
-            "boxClass"=>new BoxDuAnNoiBat(),"listData"=>$this->listData,
+            "boxClass"=>new BoxDuAnNoiBat(),
+            // "listData"=>$this->listData,
             "formSearchClass"=> new FormSearch(),
             "listHeaderMaster"=>$this->listHeaderMaster,
             "listContentMaster"=>$this->listContentMaster,
             "formTimKiemClass"=>new FormTimKiem(),
-            "formDanhSachClass"=>new FormDanhSach()]);
+            "formDanhSachClass"=>new FormDanhSach()
+           ]);
             return $var;
     }
 }

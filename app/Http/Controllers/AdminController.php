@@ -534,6 +534,7 @@ class AdminController extends MasterController
 }
     public function getKinhNghiem (Request $request){
         $kinhnghiem = DB::select('select * from kinhnghiem where TrangThai = ?', [1]);
+        // var_dump($kinhnghiem);
         $var=\View::make('modules.sub-modules.admin',[
             "linkAdmin"=>"modules.sub-modules.content.content-admin.content-list-kinh-nghiem",
             "kinhnghiem"=>$kinhnghiem]);

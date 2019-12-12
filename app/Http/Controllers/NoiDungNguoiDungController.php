@@ -30,9 +30,74 @@ class NoiDungNguoiDungController extends MasterController
         // new ContentMaster(false,"mb-1",["modules.sub-modules.dang-ky"]),
         new ContentMaster(false,"mb-1",["modules.sub-modules.noi-dung-nguoi-dang"])
     ];
-    // get k có insert post có
+    // get k có insert post có deletenoidungnguoidung
     }
+    // public function deletenoidungnguoidung (Request $request){
+    //     $id = $request->id;
+    //     if(isset($id)){
+    //         $data= DB::delete("delete from dangtin where ID_DangTin= ?", [$id]);
+    //     }
+        
+    //     $nguoidangtin =DB::select('select * from dangtin where TrangThai = ?', [1]);
+    //     $var= \View::make('pages.noidungnguoidung',["listHeaderMaster"=>$this->listHeaderMaster,
+    //     "listContentMaster"=>$this->listContentMaster,
+    //     "nguoidangtin"=>$nguoidangtin]);
+    //     return $var;
+    // }
+    public function adminNguoiDung(Request $request){
+        //var_dump($request->all());
+        // lấy dữ liệu đổ lên
+        $id =$request->id;
+        if(isset($id))
+        {
+            $data= DB::select("select * from dangtin where ID_DangTin =?",[$id]);
+        }
+        // $var= \View::make('modules.sub-modules.admin',[
+        // "linkAdmin"=>"modules.sub-modules.content-rao-vet",
+        // "data"=>isset($data)?$data[0]:'',
+        // "chucnang"=>$request->chucnang]);
+        // return $var;
+        $nguoidangtin =DB::select('select * from dangtin where TrangThai = ?', [1]);
+        $var=\View::make('modules.sub-modules.content-rao-vat',[
+            "listHeaderMaster"=>$this->listHeaderMaster,
+    "listContentMaster"=>$this->listContentMaster,
+    "data"=>isset($data)?$data[0]:'',
+    "nguoidangtin"=>$nguoidangtin,
+    "chucnang"=>$request->chucnang]);
+    return $var;
+    }
+
+    public function addNguoiDung(Request $request){
+        //var_dump($request->all());
+        switch ($request->chucnang) {
+            case 'update':
+                {
+                    DB::update('update dangtin set TieuDe=?,NgayDangTin=?,NoiDung=?,LoaiTin=?,DiaChi=?,GiaBan=?, DienTich=?,TenLienHe=?,DienThoai=?,ChieuRong=?,ChieuDai=?,SoLau=?,PhongNgu=?, HinhAnh=?,SoNgayDang=?,Tong=? where ID_DangTin=?', 
+                    [$request->txttieude,$request->txtdate,$request->txtnoidung, $request->txtloaitin,$request->txtdiachi,$request->txtgiaban,$request->txtdientich,$request->txttenlienhe,$request->txtdienthoai,$request->txtchieurong,$request->txtchieudai,$request->txtsolau,$request->txtsophongngu,$request->txthinhanh,$request->txtngay,$request->txttong,$request->id]);
+                }
+                break;
+                case 'them':
+                {
+                    DB::insert('insert into dangtin values (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)', 
+                [null,Session::get('madangnhap'),$request->txttieude ,$request->txtdate,$request->txtnoidung, $request->txtloaitin,$request->txtdiachi,$request->txtgiaban,$request->txtdientich,$request->txttenlienhe,$request->txtdienthoai,$request->txtchieurong,$request->txtchieudai,$request->txtsolau,$request->txtsophongngu,$request->txthinhanh,$request->txtngay,$request->txttong,1,"2019-08-28 00:00:00","2019-08-28 00:00:00"]);
+                }
+                break;
+            }
+            $nguoidangtin =DB::select('select * from dangtin where TrangThai = ?', [1]);
+            $var=\View::make('modules.sub-modules.content-rao-vat',[
+                "listHeaderMaster"=>$this->listHeaderMaster,
+        "listContentMaster"=>$this->listContentMaster,
+        "nguoidangtin"=>$nguoidangtin,
+        "chucnang"=>$request->chucnang]);
+        return $var;
+    }
+
     public function noidungnguoidung(Request $request){
+        $id = $request->id;
+            if(isset($id)){
+                $data= DB::delete("delete from dangtin where ID_DangTin= ?", [$id]);
+            }
+            $nguoidangtin =DB::select('select * from dangtin where TrangThai = ?', [1]);
         $nguoidangtin = DB::select('select * from dangtin as dt
         inner join admin as ad on dt.ID_Admin = ad.ID_Admin
         where dt.TrangThai = ? and dt.ID_Admin=?', [1,Session::get('madangnhap')]);

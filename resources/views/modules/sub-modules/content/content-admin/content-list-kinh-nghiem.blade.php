@@ -24,9 +24,15 @@
                             function myFunction() {
                             alert("Bạn có muốn xóa không!");
                             }
+                            // console.log(item.length);
                     </script>
                 </td>
             </tr>
             @endforeach
+            <p style="font-weight: bold;margin-top: 10px;margin-left: 10px">Tổng số sản phẩm :  {{ count($kinhnghiem)}}</p>
         </tbody>
+        
     </table>
+    
+
+    

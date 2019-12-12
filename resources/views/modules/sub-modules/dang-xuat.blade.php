@@ -20,7 +20,8 @@
             </div>
         </div>
         <div class="col-3 col-sm-3 col-md-2 col-lg-2 text-center">
-            <a class="regular-post" href="{{ url('dang-tin-nha-dat') }}">Đăng tin nhà đất</a>
+            {{-- <a class="regular-post" href="{{ url('dang-tin-nha-dat') }}">Đăng tin nhà đất</a> --}}
+            <a href="{{ url('admin-nguoi-dang-tin?chucnang=them') }}">Đăng tin nhà đất</a>
         </div>
         <div class="col-3 col-sm-3 col-md-2 col-lg-2 text-center">
             {{-- <a --}}

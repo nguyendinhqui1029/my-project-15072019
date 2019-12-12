@@ -38,12 +38,15 @@ class DangNhapThanhVienController extends MasterController
     public function postdangnhapthanhvien (Request $request){
             $tendangnhap = $request->input('txttentruycap');
             $password = $request->input('password');
-            $tk = DB::select('select * from admin where TenAdmin =?', [$tendangnhap]);
+            $tk = DB::select('select * from admin where TenAdmin =? and MatKhauAdmin =?', [$tendangnhap,$password]);
+            // $tk = DB::select('select * from admin where MatKhauAdmin =?', [$password]);
+
             //var_dump($tk);
             if(count($tk)>0)
             {
                 session(['role' =>$tk[0]->Role]); // sử dụng hàm session để truy suất hoặc lưu các session
                 session(['tendangnhap' =>$tk[0]->TenAdmin]);
+                session(['password' =>$tk[0]->MatKhauAdmin]);
                 session(['madangnhap' =>$tk[0]->ID_Admin]);
                 if($tk[0]->Role === 2){
                     return redirect('admin-du-an');

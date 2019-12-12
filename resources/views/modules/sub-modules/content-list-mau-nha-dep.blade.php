@@ -1,13 +1,15 @@
-@foreach ($maunhadep as $item)
+{{-- @foreach ($maunhadep as $item) --}}
 <div class="row" style="margin-top: 20px;">
-<div class="col-2"><img src="assets/images/maunhadep4.jpg" width="100%"/></div>
+<div class="col-2"><img src="assets/images/{{$imageCard}}" width="100%"/></div>
     <div class="col-9" style="margin-top: 10px;margin-left: 10px;">
         <div> 
-        <a href="mau-nha-dep-chi-tiet/{{$item->ID_MauNhaDep}}">{{$item->TieuDe}}</a>
+        <a href="mau-nha-dep-chi-tiet/{{$link}}">{{$contentTitleCart}}</a>
         </div>
         <div>
-        <p>{{$item->NoiDungTomTat}}</p>
+            <div class="{{$classContent}}" >
+                {{$contentCart}}
+            </div>
         </div>
     </div>
 </div>
-@endforeach
+{{-- @endforeach --}}

@@ -18,6 +18,7 @@ Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
 Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
 Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
 Route::get('/noi-dung-nguoi-dung',"NoiDungNguoiDungController@noidungnguoidung" );
+//Route::get('/delete-noi-dung-nguoi-dung',"NoiDungNguoiDungController@deletenoidungnguoidung" );
 // liên hệ
 Route::get('/lienhe-gopy',"LienHeGopYController@lienhegopy" );
 Route::post('/lienhe-gopy',"LienHeGopYController@sendlienhegopy" );
@@ -103,6 +104,10 @@ Route::get('/admin-tinh-thanh-pho',"AdminController@adminTinhThanhPho" );
 Route::post('/admin-tinh-thanh-pho',"AdminController@addTinhThanhPho" );
 Route::get('/load-tinh-thanh-pho',"AdminController@getTinhThanhPho" );
 Route::get('/delete-tinh-thanh-pho',"AdminController@deleteTinhThanhPho");
+// chỉnh sửa thông tin trong người dùng đăng tin
+Route::get('/admin-nguoi-dang-tin',"NoiDungNguoiDungController@adminNguoiDung" );
+Route::post('/admin-nguoi-dang-tin',"NoiDungNguoiDungController@addNguoiDung" );
+
 //tintuc
 Route::get('/admin-tin-tuc',"AdminController@adminTinTuc" );
 Route::post('/admin-tin-tuc',"AdminController@addTinTuc" );
