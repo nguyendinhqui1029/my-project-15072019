@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+  .navbar1 {
+    overflow: hidden;
+    background-color: #0090b5;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .navbar1 a {
+    float: left;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  .dropdown1 {
+    float: left;
+    overflow: hidden;
+  }
+  
+  .dropdown1 .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0; font-weight: bold;
+    border-left: 1px solid #45bbf7;
+   
+  }
+  
+  .navbar1 a:hover, .dropdown1:hover .dropbtn {
+    background-color: #043f5c;
+    width: 100%;
+  }
+  .dropdown1-content {
+    display: none;
+    position: absolute;
+    left: inherit;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1000;
+    background-color:#166175;
+  }
+  
+  .dropdown1-content .column {
+    color: white;
+  }
+  
+  .dropdown1:hover .dropdown1-content {
+    display: block;
+    z-index: 1000;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 0px;
+    width: inherit;
+
+    
+  }
+  
+  .column a {
+    float: none;
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: white;
+  }
+  .column1 {
+    float: left;
+    /* width: 33.33%; */
+    padding: 0px;
+    background-color: #166175; 
+  }
+  .column1 a{
+    float: none;
+    color: black;
+    padding: 7px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: white;
+    width: 190px;
+    background-color: #166175;
+  }
+  .column a:hover {
+    background-color: #166175;
+  }
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    
+  }
+  .footer-main1 a{
+    background-color: #0099CC !important;
+    border-bottom: 1px transparent #376a87;
+    -webkit-border-before-width: 100px;
+  }
+  

@@ -10,24 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', 'HomeController@home');
+Route::get('/', "HomeController@home");
 
-Route::get('/du-an', function () {
-    return view('pages.project');
-});
-<<<<<<< HEAD
 
-=======
-// trang nhà mua giới
-Route::get('/nha-moi-gioi', function () {
-    return view('pages.nhamoigioi');
-});
->>>>>>> 124cfd0027d9897765bd2359d6e7671f058d5a53
+Route::get('/nha-moi-gioi',"NhaMoiGioiController@nhamoigioi" );
+
+Route::get('/kinh-nghiem',"KinhNghiemController@kinhnghiem" );
+Route::get('/mau-nha-dep',"MauNhaDepController@maunhadep" );
+Route::get('/lienhe-gopy',"LienHeGopYController@lienhegopy" );
+Route::get('/nha-dat-ban',"NhaDatBanController@nhadatban" );
+Route::get('/nha-dat-cho-thue',"NhaDatChoThueController@nhadatchothue" );
+
 Route::get('locale/{locale}', function($locale){
     Session::put('locale',$locale);
     return  redirect()->back();
 });
-<<<<<<< HEAD
-
-=======
->>>>>>> 124cfd0027d9897765bd2359d6e7671f058d5a53

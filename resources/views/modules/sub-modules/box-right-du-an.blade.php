@@ -1,14 +1,15 @@
     @component('modules.sub-modules.box-right.box-right-master')
         @slot('classContainer')
-        d-flex flex-column bd-highlight mb-3 border-right
+        {{$boxright->classContainer}}
         @endslot
         @slot('classBoxTitle')
-        p-2 bd-highlight
+        {{$boxright->classBoxTitle= " mt-2 pt-2 background-mua-ban-nha-dat"}}
         @endslot
         @slot('classTitle')
+        {{$boxright->classTitle}}
         @endslot
         @slot('contentTitle')
-        Liên kết nổi bật
+        {{$boxright->contentTitle}}
         @endslot
         @slot('classColumnBoxData')
         row
@@ -23,11 +24,11 @@
                         {{$item->noidung}} 
                     @endslot
                     @slot('classBoxData')
-                    col-lg-6
+                    {{$boxright->classBoxData}}
                     {{-- p-2 bd-highlight --}}
                     @endslot
                     @slot('classLinkData')
-                    p-2 bd-highlight
+                    {{$boxright->classLinkData}}
                     @endslot
                 @endcomponent
             @endforeach

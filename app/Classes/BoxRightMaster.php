@@ -10,14 +10,13 @@ class BoxRightMaster{
    public $classBoxData;
    public $classLinkData;
    public $data = [];
-   function __construct($id,$classContainer,
-    $classBoxTitle,
-    $classTitle,
-    $contentTitle,
-    $classBoxData,
-    $classLinkData,
-    $data){
-        $this->id =$id;
+   function __construct($data,$classContainer=" d-flex flex-column bd-highlight mb-3",
+    $classBoxTitle=" p-2 bd-highlight",
+    $classTitle ="",
+    $contentTitle="Liên kết nổi bật",
+    $classBoxData="col-lg-6",
+    $classLinkData="p-2 bd-highlight"
+    ){
         $this->classContainer =$classContainer;
         $this->classBoxTitle = $classBoxTitle;
         $this->classTitle = $classTitle;

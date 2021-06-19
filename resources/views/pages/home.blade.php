@@ -1,50 +1,13 @@
 @extends('pages.master')
 
-@section('title',__('title-home'))
+@section('title',__('title_home'))
 
-@section('top-info')
-  @include('modules.sub-modules.top-info')   
+@section('header-master')
+  @include('modules.sub-modules.header-master')
 @endsection
 
-@section('logo')
-  @include('modules.sub-modules.logo')   
-@endsection
-
-@section('video-gioi-thieu')
-  @include('modules.sub-modules.video-gioi-thieu')   
-@endsection
-
-@section('menu-top')
-  @include('modules.sub-modules.menu-top')   
-@endsection
-
-@section('main-menu')
-  @include('modules.sub-modules.menu')   
-@endsection
-
-@section('form-search')
-  @include('modules.sub-modules.form-search-center')   
-@endsection
-
-@section('kinh-nghiem')
-  @include('modules.sub-modules.kinh-nghiem')   
-@endsection
-
-
-@section('bat-dong-san-noi-bat')
-  @include('modules.sub-modules.box-du-an-noi-bat')
-  @include('modules.sub-modules.bat-dong-san-noi-bat')   
-@endsection
-
-@section('news-right')
-  @include('modules.sub-modules.news-right')
-  @include('modules.sub-modules.box-right-du-an')
-  @include('modules.sub-modules.box-right-du-an1')
-@endsection
-
-@section('quick-link-right')
-  @include('modules.sub-modules.quick-link-right')   
- 
+@section('content-master')
+  @include('modules.sub-modules.content-master') 
 @endsection
 
 @section('quang-cao-trai')
@@ -53,14 +16,6 @@
 
 @section('quang-cao-phai')
   @include('modules.sub-modules.quang-cao-phai')
-@endsection
-
-@section('nha-dat-theo-tinh-thanh-pho')
-{{-- @include('modules.sub-modules.main-card-employee') --}}
-@include('modules.sub-modules.nha-dat-khu-vuc')  
-@endsection
-@section('content')
-  @include('modules.sub-modules.content')   
 @endsection
 
 @section('footer')
